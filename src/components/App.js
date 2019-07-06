@@ -6,7 +6,7 @@ class App extends React.Component {
     var tl = new window.TimelineMax();
     const controller = new window.ScrollMagic.Controller();
 
-    tl.from('#test', .5, {opacity: 0});
+    tl.from('#test', .5, {opacity: 0, left: "-100vw"});
 
     const scene = new window.ScrollMagic.Scene({
       triggerElement: "#test",
