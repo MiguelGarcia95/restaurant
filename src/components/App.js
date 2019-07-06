@@ -1,11 +1,14 @@
 import React from 'react';
-import './App.css';
+import './styles.css';
 
 class App extends React.Component {
   componentDidMount() {
-    // window.addEventListener('load', () => {
-    //   document.getElementById('loading').classList.add('loaded');
-    // })
+
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        // document.getElementById('loading').classList.add('loaded');
+      }, 1000)
+    })
 
     var tl = new window.TimelineMax();
     const controller = new window.ScrollMagic.Controller();
@@ -22,7 +25,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        {/* <section id='loading'>loading</section> */}
+        <section id='loading'>
+          <img src='img/spinner.svg' alt='loading logo' />
+        </section>
+
         <section className='welcome'>
 
         </section>
