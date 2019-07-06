@@ -8,3 +8,13 @@ body {
   width: 100vw;
   height: 100vh;
 }
+
+.welcome:nth-of-type(1) {
+  background-color: green;
+}
+
+#test {
+  background-color: yellow;
+  width: 100vw;
+  height: 100vh;
+}

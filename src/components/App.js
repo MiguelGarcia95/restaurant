@@ -6,10 +6,10 @@ class App extends React.Component {
     var tl = new window.TimelineMax();
     const controller = new window.ScrollMagic.Controller();
 
-    tl.from('.welcome', .5, {opacity: 0});
+    tl.from('#test', .5, {opacity: 0});
 
     const scene = new window.ScrollMagic.Scene({
-      triggerElement: ".welcome",
+      triggerElement: "#test",
     })
     .setTween(tl)
     .addTo(controller);
@@ -19,6 +19,12 @@ class App extends React.Component {
     return (
       <div className="app">
         <section className='welcome'>
+
+        </section>
+        <section className='welcome'>
+
+        </section>
+        <section id='test'>
 
         </section>
       </div>
