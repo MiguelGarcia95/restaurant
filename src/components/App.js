@@ -12,24 +12,39 @@ class App extends React.Component {
     window.addEventListener('load', () => {
       setTimeout(() => {
         document.getElementById('loading').classList.add('loaded');
-        // this.setState({loading: false});
+        this.setState({loading: false});
       }, 1000)
     })
 
-    var tl = new window.TimelineMax();
-    const controller = new window.ScrollMagic.Controller();
+    // var tl = new window.TimelineMax();
+    // const controller = new window.ScrollMagic.Controller();
 
-    // tl.from('#test', .5, {opacity: 0, right: "-100%"});
-    tl.from('.image_side', 0.5, {bottom: '-100vh'}, '-=2');
-    tl.from('.content_side', 0.5, {top: '-100vh'});
-    // content_side
-    const scene = new window.ScrollMagic.Scene({
-      triggerElement: ".welcome",
-      triggerHook: "onLeave",
-      // offset: 200
-    })
-    .setTween(tl)
-    .addTo(controller);
+    // tl.from('.image_side', 0.5, {bottom: '-100vh'}, '-=2');
+    // tl.from('.content_side', 0.5, {top: '-100vh'});
+    // // content_side
+    // const scene = new window.ScrollMagic.Scene({
+    //   triggerElement: ".welcome",
+    //   triggerHook: "onLeave"
+    // })
+    // .setTween(tl)
+    // .addTo(controller);
+  }
+
+  componentDidUpdate() {
+    if (!this.state.loading) {
+      var tl = new window.TimelineMax();
+      const controller = new window.ScrollMagic.Controller();
+  
+      tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
+      tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
+      // content_side
+      const scene = new window.ScrollMagic.Scene({
+        triggerElement: ".welcome",
+        triggerHook: "onLeave"
+      })
+      .setTween(tl)
+      .addTo(controller);
+    }
   }
 
   render() {
