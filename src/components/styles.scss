@@ -15,14 +15,21 @@ body {
   height: 100vh;
   padding-left: 80px;
   box-sizing: border-box;
+  position: relative;
   p {
     margin: 0;
   }
-  & :nth-of-type(1) {
-    background-color: green;
-  }
   &.welcome {
     background-color: $bgColor;
+  }
+
+  .content_side {
+    background-color: white;
+    position: absolute;
+    height: $fullHeight;
+    width: 60%;
+    z-index: 2;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
   }
   
   .image_side {
@@ -31,6 +38,8 @@ body {
     background-size: cover;
     width: 50%; 
     height: $fullHeight;
+    position: absolute;
+    right: 0;
   }
 }
 
