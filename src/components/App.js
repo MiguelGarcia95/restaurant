@@ -38,9 +38,8 @@ class App extends React.Component {
         <Navbar />
 
         <section className='page_section welcome'>
-          {/* <p>Take a bite.</p> */}
           <section className='content_side'>
-
+            <h1>Come Take a bite</h1>
           </section>
           <section className='image_side'>
             {/* <img src='img/background.jpg' /> */}
