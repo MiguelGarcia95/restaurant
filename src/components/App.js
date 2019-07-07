@@ -1,19 +1,23 @@
 import React from 'react';
+import Navbar from './layout/Navbar';
 import './styles.css';
 
 class App extends React.Component {
-  componentDidMount() {
+  state = {
+    loading: false,
+  }
 
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        // document.getElementById('loading').classList.add('loaded');
-      }, 1000)
-    })
+  componentDidMount() {
+    // window.addEventListener('load', () => {
+    //   setTimeout(() => {
+    //     document.getElementById('loading').classList.add('loaded');
+    //   }, 1000)
+    // })
 
     var tl = new window.TimelineMax();
     const controller = new window.ScrollMagic.Controller();
 
-    tl.from('#test', .5, {opacity: 0, left: "-100%"});
+    tl.from('#test', .5, {opacity: 0, right: "-100%"});
 
     const scene = new window.ScrollMagic.Scene({
       triggerElement: "#test",
@@ -25,17 +29,22 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
+        {/* 
         <section id='loading'>
           <img src='img/spinner.svg' alt='loading logo' />
+        </section> 
+        */}
+
+        <Navbar />
+
+        <section className='page_section welcome'>
+          <p>Take a bite.</p>
         </section>
 
-        <section className='welcome'>
+        <section className='page_section'>
 
         </section>
-        <section className='welcome'>
-
-        </section>
-        <section id='test'>
+        <section className='page_section' id='test'>
           <h1>This slides in!</h1>
         </section>
       </div>

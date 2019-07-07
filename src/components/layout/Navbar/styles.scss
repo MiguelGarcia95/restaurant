@@ -1,0 +1,25 @@
+$navWidth: 80px;
+$navHeight: 100vh;
+
+.navbar {
+  height: $navHeight;
+  width: $navWidth;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: #232323;
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
+  span {
+    p {
+      writing-mode:vertical-rl;
+      transform: rotate(180deg);
+      margin: 0;
+      padding: 30px 0;
+      line-height: 40px;
+      margin-left: 20px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+}
