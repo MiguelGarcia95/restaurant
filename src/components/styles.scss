@@ -9,36 +9,42 @@ body {
   overflow-x: hidden;
 }
 
-.page_section {
+@mixin page_section {
   background-color: $bgColor;
   width: 100vw;
   height: 100vh;
   padding-left: 80px;
   box-sizing: border-box;
   position: relative;
+}
+
+@mixin welcomeSide {
+  position: absolute;
+  height: $fullHeight;
+}
+
+.page_section {
+  @include page_section;
   p {
     margin: 0;
   }
-  &.welcome {
-    background-color: $bgColor;
-  }
+  // &.welcome {}
 
   .content_side {
+    @include welcomeSide;
     background-color: white;
-    position: absolute;
-    height: $fullHeight;
     width: 60%;
     z-index: 2;
     box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+    left: 0;
   }
   
   .image_side {
+    @include welcomeSide;
     background: url('/img/background.jpg') no-repeat center;
     background-attachment: fixed;
     background-size: cover;
     width: 50%; 
-    height: $fullHeight;
-    position: absolute;
     right: 0;
   }
 }
