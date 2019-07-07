@@ -6,7 +6,6 @@ class App extends React.Component {
   state = {
     loading: true,
     currentSlide: 'welcome'
-    // loading: false,
   }
 
   componentDidMount() {
@@ -18,19 +17,37 @@ class App extends React.Component {
     })
   }
 
-  componentDidUpdate() {
-    if (!this.state.loading) {
+  componentDidUpdate(prevProps, prevState) {
+    if (!this.state.loading && prevState.loading) {
       var tl = new window.TimelineMax();
       const controller = new window.ScrollMagic.Controller();
   
-      tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
-      tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
-      tl.from('.navbar', 0.5, {left: '-80px'}, '-=1.5');
+      // tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
+      // tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
+      tl.from('.navbar', 0.5, {left: '-80px'}, '+=0.5');
       const scene = new window.ScrollMagic.Scene({
-        triggerElement: ".welcome"
+        // triggerElement: ".welcome"
       })
       .setTween(tl)
       .addTo(controller);
+    }
+
+    switch (this.state.currentSlide) {
+      case 'welcome':
+        var tl = new window.TimelineMax();
+        const controller = new window.ScrollMagic.Controller();
+    
+        tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
+        tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
+        // tl.from('.navbar', 0.5, {left: '-80px'}, '-=1.5');
+        const scene = new window.ScrollMagic.Scene({
+          triggerElement: ".welcome"
+        })
+        .setTween(tl)
+        .addTo(controller);
+        break;
+      default:
+        break;
     }
   }
 
