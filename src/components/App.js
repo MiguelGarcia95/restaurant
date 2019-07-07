@@ -15,19 +15,6 @@ class App extends React.Component {
         this.setState({loading: false});
       }, 1000)
     })
-
-    // var tl = new window.TimelineMax();
-    // const controller = new window.ScrollMagic.Controller();
-
-    // tl.from('.image_side', 0.5, {bottom: '-100vh'}, '-=2');
-    // tl.from('.content_side', 0.5, {top: '-100vh'});
-    // // content_side
-    // const scene = new window.ScrollMagic.Scene({
-    //   triggerElement: ".welcome",
-    //   triggerHook: "onLeave"
-    // })
-    // .setTween(tl)
-    // .addTo(controller);
   }
 
   componentDidUpdate() {
@@ -37,10 +24,11 @@ class App extends React.Component {
   
       tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
       tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
-      // content_side
+      // tl.from('.navbar', 0.5, {left: '-80px'}, '-=1');
+      tl.from('.navbar', 0.5, {scale: 0, left: '-80px'}, '-=1');
       const scene = new window.ScrollMagic.Scene({
         triggerElement: ".welcome",
-        triggerHook: "onLeave"
+        // triggerHook: "onLeave"
       })
       .setTween(tl)
       .addTo(controller);
