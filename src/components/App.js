@@ -20,38 +20,33 @@ class App extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (!this.state.loading && prevState.loading) {
       var tl = new window.TimelineMax();
-      const controller = new window.ScrollMagic.Controller();
-  
-      // tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
-      // tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
       tl.from('.navbar', 0.5, {left: '-80px'}, '+=0.5');
-      const scene = new window.ScrollMagic.Scene({
-        // triggerElement: ".welcome"
-      })
-      .setTween(tl)
-      .addTo(controller);
-    }
-
-    switch (this.state.currentSlide) {
-      case 'welcome':
-        var tl = new window.TimelineMax();
-        const controller = new window.ScrollMagic.Controller();
-    
-        tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
-        tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
-        // tl.from('.navbar', 0.5, {left: '-80px'}, '-=1.5');
-        const scene = new window.ScrollMagic.Scene({
-          triggerElement: ".welcome"
-        })
-        .setTween(tl)
-        .addTo(controller);
-        break;
-      default:
-        break;
+      tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
+      tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
+      // tl.reversed(true);
+    } else {
+      switch (this.state.currentSlide) {
+        case 'welcome':
+          var tl = new window.TimelineMax();
+      
+          tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
+          tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
+          // tl.from('.navbar', 0.5, {left: '-80px'}, '-=1.5');
+          break;
+        default:
+          break;
+      }
     }
   }
 
-  currentSlide = slide => this.setState({currentSlide: slide})
+  currentSlide = slide => {
+    if (this.state.currentSlide !== slide) {
+      this.setState({currentSlide: slide})
+    };
+
+
+
+  }
 
   render() {
     // const {loading} = this.state;
