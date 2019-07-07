@@ -34,10 +34,21 @@ body {
 }
 
 .page_section .content_side h1 {
-  font-size: 3em;
-  text-transform: capitalize;
-  text-shadow: 1px 1px 1px white, 1px 1px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px white, 1px 1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px white, -1px -1px 5px rgba(0, 0, 0, 0.5);
   font-weight: 600;
+  text-transform: uppercase;
+}
+
+.page_section .content_side h1:first-of-type {
+  font-size: 3em;
+  margin-left: 150px;
+  margin-top: 150px;
+}
+
+.page_section .content_side h1:last-of-type {
+  font-size: 5em;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 .page_section .image_side {

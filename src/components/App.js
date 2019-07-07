@@ -39,7 +39,8 @@ class App extends React.Component {
 
         <section className='page_section welcome'>
           <section className='content_side'>
-            <h1>Come Take a bite</h1>
+            <h1>Hungry?</h1>
+            <h1>Get a bite</h1>
           </section>
           <section className='image_side'>
             {/* <img src='img/background.jpg' /> */}
