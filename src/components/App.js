@@ -4,36 +4,44 @@ import './styles.css';
 
 class App extends React.Component {
   state = {
-    loading: false,
+    loading: true,
+    // loading: false,
   }
 
   componentDidMount() {
-    // window.addEventListener('load', () => {
-    //   setTimeout(() => {
-    //     document.getElementById('loading').classList.add('loaded');
-    //   }, 1000)
-    // })
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loading').classList.add('loaded');
+        // this.setState({loading: false});
+      }, 1000)
+    })
 
     var tl = new window.TimelineMax();
     const controller = new window.ScrollMagic.Controller();
 
-    tl.from('#test', .5, {opacity: 0, right: "-100%"});
-
+    // tl.from('#test', .5, {opacity: 0, right: "-100%"});
+    tl.from('.image_side', 0.5, {bottom: '-100vh'}, '-=2');
+    tl.from('.content_side', 0.5, {top: '-100vh'});
+    // content_side
     const scene = new window.ScrollMagic.Scene({
-      triggerElement: "#test",
+      triggerElement: ".welcome",
+      triggerHook: "onLeave",
+      // offset: 200
     })
     .setTween(tl)
     .addTo(controller);
   }
 
   render() {
+    // const {loading} = this.state;
+    
     return (
       <div className="app">
-        {/* 
+        
         <section id='loading'>
           <img src='img/spinner.svg' alt='loading logo' />
         </section> 
-        */}
+       
 
         <Navbar />
 
@@ -41,6 +49,7 @@ class App extends React.Component {
           <section className='content_side'>
             <h1>Hungry?</h1>
             <h1>Get a bite</h1>
+            <button>Check our Menu Out</button>
           </section>
           <section className='image_side'>
             {/* <img src='img/background.jpg' /> */}

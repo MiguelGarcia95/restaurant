@@ -36,19 +36,26 @@ body {
 .page_section .content_side h1 {
   text-shadow: 1px 1px 1px white, 1px 1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px white, -1px -1px 5px rgba(0, 0, 0, 0.5);
   font-weight: 600;
+  color: #232323;
+  margin: 0;
   text-transform: uppercase;
+  margin-top: 100px;
 }
 
 .page_section .content_side h1:first-of-type {
   font-size: 3em;
-  margin-left: 150px;
-  margin-top: 150px;
+  margin-left: 100px;
 }
 
 .page_section .content_side h1:last-of-type {
   font-size: 5em;
   text-transform: capitalize;
   text-align: center;
+}
+
+.page_section .content_side button {
+  border: none;
+  padding: 20px 50px;
 }
 
 .page_section .image_side {
