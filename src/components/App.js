@@ -18,20 +18,17 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    var tl = new window.TimelineMax();
     if (!this.state.loading && prevState.loading) {
-      var tl = new window.TimelineMax();
       tl.from('.navbar', 0.5, {left: '-80px'}, '+=0.5');
       tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
       tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
-      // tl.reversed(true);
     } else {
       switch (this.state.currentSlide) {
         case 'welcome':
-          var tl = new window.TimelineMax();
-      
+          tl.reversed(true);
           tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
           tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
-          // tl.from('.navbar', 0.5, {left: '-80px'}, '-=1.5');
           break;
         default:
           break;
