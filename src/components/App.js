@@ -5,6 +5,7 @@ import './styles.css';
 class App extends React.Component {
   state = {
     loading: true,
+    currentSlide: 'welcome'
     // loading: false,
   }
 
@@ -35,6 +36,8 @@ class App extends React.Component {
     }
   }
 
+  currentSlide = slide => this.setState({currentSlide: slide})
+
   render() {
     // const {loading} = this.state;
     
@@ -46,7 +49,7 @@ class App extends React.Component {
         </section> 
        
 
-        <Navbar />
+        <Navbar currentSlide={this.currentSlide} />
 
         <section className='page_section welcome'>
           <section className='content_side'>

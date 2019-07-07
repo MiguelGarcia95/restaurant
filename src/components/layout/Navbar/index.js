@@ -1,13 +1,13 @@
 import React from 'react';
 import './styles.css';
 
-function Navbar() {
+function Navbar({currentSlide}) {
   return (
     <section className='navbar'>
-      <span><p>Welcome</p></span>
-      <span><p>About</p></span>
-      <span><p>Menu</p></span>
-      <span><p>Contact</p></span>
+      <span onClick={currentSlide('welcome')} ><p>Welcome</p></span>
+      <span onClick={currentSlide('about')} ><p>About</p></span>
+      <span onClick={currentSlide('menu')} ><p>Menu</p></span>
+      <span onClick={currentSlide('contact')} ><p>Contact</p></span>
     </section>
   );
 }
