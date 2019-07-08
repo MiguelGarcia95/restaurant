@@ -14,39 +14,39 @@ button:focus {
 
 input, textarea {
   font-family: "Montserrat";
-  color: white;
+  color: #232323;
 }
 
 input::-webkit-input-placeholder {
-  color: white;
+  color: #232323;
 }
 
 input:-ms-input-placeholder {
-  color: white;
+  color: #232323;
 }
 
 input::-ms-input-placeholder {
-  color: white;
+  color: #232323;
 }
 
 input::placeholder {
-  color: white;
+  color: #232323;
 }
 
 textarea::-webkit-input-placeholder {
-  color: white;
+  color: #232323;
 }
 
 textarea:-ms-input-placeholder {
-  color: white;
+  color: #232323;
 }
 
 textarea::-ms-input-placeholder {
-  color: white;
+  color: #232323;
 }
 
 textarea::placeholder {
-  color: white;
+  color: #232323;
 }
 
 .page_section {
@@ -183,6 +183,10 @@ textarea::placeholder {
   background-color: rgba(26, 26, 26, 0.5);
 }
 
+.page_section.contact {
+  background-color: #f0f0f0;
+}
+
 .page_section.contact .contact_form {
   width: 800px;
   height: 400px;
@@ -201,7 +205,7 @@ textarea::placeholder {
 }
 
 .page_section.contact .contact_form h1 {
-  color: white;
+  color: #232323;
   line-height: 50px;
   font-size: 2em;
   margin: 0;
@@ -224,6 +228,7 @@ textarea::placeholder {
   background-color: transparent;
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
 }
 
 .page_section.contact .contact_form .form .inputs {

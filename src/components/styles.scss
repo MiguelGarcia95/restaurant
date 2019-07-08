@@ -17,19 +17,19 @@ button:focus {
     outline: none;
 }
 
-input, textarea {font-family: $font; color: white;}
-input::-webkit-input-placeholder {color: white;}
-input:-moz-placeholder {color: white; opacity: 1;}
-input::-moz-placeholder {color: white; opacity: 1;}
-input:-ms-input-placeholder {color: white;}
-input::-ms-input-placeholder {color: white;}
-input::placeholder {color: white;}
-textarea::-webkit-input-placeholder {color: white;}
-textarea:-moz-placeholder {color: white; opacity: 1;}
-textarea::-moz-placeholder {color: white; opacity: 1;}
-textarea:-ms-input-placeholder {color: white;}
-textarea::-ms-input-placeholder {color: white;}
-textarea::placeholder {color: white;}
+input, textarea {font-family: $font; color: $bgColor;}
+input::-webkit-input-placeholder {color: $bgColor;}
+input:-moz-placeholder {color: $bgColor; opacity: 1;}
+input::-moz-placeholder {color: $bgColor; opacity: 1;}
+input:-ms-input-placeholder {color: $bgColor;}
+input::-ms-input-placeholder {color: $bgColor;}
+input::placeholder {color: $bgColor;}
+textarea::-webkit-input-placeholder {color: $bgColor;}
+textarea:-moz-placeholder {color: $bgColor; opacity: 1;}
+textarea::-moz-placeholder {color: $bgColor; opacity: 1;}
+textarea:-ms-input-placeholder {color: $bgColor;}
+textarea::-ms-input-placeholder {color: $bgColor;}
+textarea::placeholder {color: $bgColor;}
 
 @mixin page_section {
   background-color: $bgColor;
@@ -163,10 +163,12 @@ textarea::placeholder {color: white;}
   }
 
   &.contact {
+    background-color: rgb(240, 240, 240);
     .contact_form {
       width: 800px; 
       height: 400px;
       box-shadow: inset 0px 0px 10px $lightBgColor;
+      // background-color: $bgColor;
       box-sizing: border-box;
       padding: 25px;
       text-align: center;
@@ -175,7 +177,7 @@ textarea::placeholder {color: white;}
       left: 0; right: 0;
       margin: auto;
       h1 {
-        color: white;
+        color: $bgColor;
         line-height: 50px;
         font-size: 2em;
         margin: 0;
@@ -195,6 +197,7 @@ textarea::placeholder {color: white;}
           text-align: center;
           background-color: transparent;
           box-shadow: 0px 0px 10px 1px $lightBgColor;
+          font-weight: 600;
         }
         .inputs {
           width: 45%; height: 100%;

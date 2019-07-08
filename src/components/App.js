@@ -137,7 +137,7 @@ class App extends React.Component {
 
         <section className='page_section contact'>
           <section className='contact_form'>
-            <h1>Contact Me</h1>
+            <h1>Contact Us</h1>
             <section className='form'>
               <section className='inputs'>
                 <input type='text' placeholder='Name' name='name' autoComplete='off' />
@@ -146,13 +146,8 @@ class App extends React.Component {
               </section>
               <textarea name='message' placeholder="Tell us what's on your mind"></textarea>
             </section>
-            {/* <form></form> */}
           </section>
         </section>
-
-        {/* <section className='page_section' id='test'>
-          <h1>This slides in!</h1>
-        </section> */}
       </div>
     );
   }
