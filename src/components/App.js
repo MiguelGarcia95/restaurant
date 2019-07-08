@@ -136,7 +136,15 @@ class App extends React.Component {
         </section>
 
         <section className='page_section contact'>
-          <h1>contact</h1>
+          <section className='contact_form'>
+            <h1>Contact Me</h1>
+            <form>
+              <input type='text' placeholder='Name' name='name' />
+              <input type='email' placeholder='Email' name='email' />
+              <input type='text' placeholder='Subject' name='subject' />
+              <textarea name='message' placeholder="Tell us what's on your mind"></textarea>
+            </form>
+          </section>
         </section>
 
         {/* <section className='page_section' id='test'>
