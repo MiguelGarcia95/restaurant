@@ -1,5 +1,6 @@
 $font: 'Montserrat';
 $bgColor: #232323;
+$lightBgColor: rgba(0,0,0,0.5);
 $fullHeight: 100vh;
 
 body {
@@ -43,34 +44,35 @@ body {
     padding-left: 80px;
     box-sizing: border-box;
     left: 0;
-    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 10px 5px $lightBgColor;
     z-index: 2;
     top: -100vh;
 
     .content-button {
-      width: 200px;
-      height: 80px;
+      width: 210px;
+      height: 70px;
       position: absolute;
-      box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
-      background-color: $bgColor;
-
-      p {
-        line-height: 80px;
-        margin: 0;
-        color: white;
-        font-size: 1.1em;
-
-      }
-      bottom: 0;
+      box-shadow: inset 0px 0px 10px $lightBgColor;
+      // background-color: $bgColor;
+      bottom: 100px;
       left: 0; right: 0;
       margin: auto;
-
+      text-align: center;
+      p {
+        line-height: 70px;
+        margin: 0;
+        // color: white;
+        color: $bgColor;
+        font-size: 1em;
+        cursor: pointer;
+      }
     }
+
     h1 {
       text-shadow: 1px 1px 1px white,
-                   1px 1px 5px rgba(0,0,0,0.5),
+                   1px 1px 5px $lightBgColor,
                    -1px -1px 5px white,
-                   -1px -1px 5px rgba(0,0,0,0.5);
+                   -1px -1px 5px $lightBgColor;
       font-weight: 600;
       color: $bgColor;
       margin: 0;

@@ -45,23 +45,24 @@ body {
 }
 
 .page_section .content_side .content-button {
-  width: 200px;
-  height: 80px;
+  width: 210px;
+  height: 70px;
   position: absolute;
   -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
           box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-  background-color: #232323;
-  bottom: 0;
+  bottom: 100px;
   left: 0;
   right: 0;
   margin: auto;
+  text-align: center;
 }
 
 .page_section .content_side .content-button p {
-  line-height: 80px;
+  line-height: 70px;
   margin: 0;
-  color: white;
-  font-size: 1.1em;
+  color: #232323;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 .page_section .content_side h1 {
