@@ -54,8 +54,8 @@ class App extends React.Component {
         // tl.from('.content_side', 0.5, {top: '-100vh'},  '-=0.5');
         break;
       case 'about':
-        // tl.to('.about', 0.5, {right: '0vw'}, '+=1.5');
-        tl.to('.about', 0.5, {right: '0vw'}, '+=2');
+        tl.to('.about', 0.5, {right: '0vw'}, '+=1.5');
+        // tl.to('.about', 0.5, {right: '0vw'}, '+=2');
         break;
       case 'menu':
         tl.to('.menu', 0.5, {right: '0vw'}, '+=0.5');
