@@ -19,6 +19,15 @@ $navHeight: 100vh;
       margin-left: 20px;
       color: white;
       cursor: pointer;
+      transition: 0.5s;
+    }
+    &.active {
+      p {
+        font-weight: 600;
+        font-size: 1.1em;
+        text-shadow: 1px 1px 5px white,
+                     1px 1px 5px black;
+      }
     }
   }
 

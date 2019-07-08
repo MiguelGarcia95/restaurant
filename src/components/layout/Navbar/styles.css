@@ -21,5 +21,13 @@
   margin-left: 20px;
   color: white;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar span.active p {
+  font-weight: 600;
+  font-size: 1.1em;
+  text-shadow: 1px 1px 5px white, 1px 1px 5px black;
 }
 /*# sourceMappingURL=styles.css.map */
