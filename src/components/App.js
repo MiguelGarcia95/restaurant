@@ -37,7 +37,7 @@ class App extends React.Component {
         //   break;
         case 'menu':
           tl.to('.menu_side', 0.5, {left: '-100vw'}, `+=${increment}`);
-          tl.to('.menu_image_side', 0.5, {left: '-100vw'},  `+=${increment}`);
+          tl.to('.menu_image_side', 1, {left: '-100vw'},  `+=${increment}`);
           tl.to('.menu', 0.5, {right: '100vw'}, `-=${increment}`);
           break;
         case 'contact':
