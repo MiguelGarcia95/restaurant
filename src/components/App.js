@@ -25,7 +25,7 @@ class App extends React.Component {
     } else {
       switch (prevState.currentSlide) {
         case 'welcome':
-            tl.to('.welcome', 0.5, {right: '100vw'});
+          tl.to('.welcome', 0.5, {right: '100vw'});
           break;
         case 'about':
           tl.to('.about', 0.5, {right: '100vw'});

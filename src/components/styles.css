@@ -12,11 +12,16 @@ body {
   padding-left: 80px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  position: relative;
-  right: '100vw';
+  position: absolute;
+  overflow: hidden;
+  right: 100vw;
 }
 
 .page_section p {
+  margin: 0;
+}
+
+.page_section h1 {
   margin: 0;
 }
 
@@ -67,6 +72,7 @@ body {
   background-size: cover;
   width: 40%;
   right: 0;
+  z-index: 1;
 }
 
 #test {
