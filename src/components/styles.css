@@ -177,6 +177,9 @@ textarea::placeholder {
 
 .page_section.menu .menu_side .menu_items {
   width: 100%;
+  padding: 0 50px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .page_section.menu .menu_side .menu_items .menu_item {
@@ -185,6 +188,7 @@ textarea::placeholder {
   margin: 0px 1.6%;
   height: 200px;
   background-color: red;
+  margin-top: 30px;
 }
 
 .page_section.menu .menu_side .menu_items .menu_item .item_image {

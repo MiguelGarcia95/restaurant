@@ -125,6 +125,7 @@ class App extends React.Component {
               <p>Whether you're in for breakfast, a business lunch or a family dinner, we promise you'll find something to love.</p>
             </section>
             <section className='menu_items'>
+
               <section className='menu_item'>
                 <section className='item_image'>
                   <p className='item_price'>$9.99</p>
@@ -133,6 +134,48 @@ class App extends React.Component {
                   <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
                 </section>
               </section>
+              <section className='menu_item'>
+                <section className='item_image'>
+                  <p className='item_price'>$9.99</p>
+                </section>
+                <section className='item_description'>
+                  <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
+                </section>
+              </section>
+              <section className='menu_item'>
+                <section className='item_image'>
+                  <p className='item_price'>$9.99</p>
+                </section>
+                <section className='item_description'>
+                  <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
+                </section>
+              </section>
+
+              <section className='menu_item'>
+                <section className='item_image'>
+                  <p className='item_price'>$9.99</p>
+                </section>
+                <section className='item_description'>
+                  <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
+                </section>
+              </section>
+              <section className='menu_item'>
+                <section className='item_image'>
+                  <p className='item_price'>$9.99</p>
+                </section>
+                <section className='item_description'>
+                  <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
+                </section>
+              </section>
+              <section className='menu_item'>
+                <section className='item_image'>
+                  <p className='item_price'>$9.99</p>
+                </section>
+                <section className='item_description'>
+                  <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
+                </section>
+              </section>
+
             </section>
           </section>
         </section>
