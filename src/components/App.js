@@ -19,23 +19,22 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    // var tl = ;
     const {tl} = this.state;
     if (!this.state.loading && prevState.loading) {
       tl.from('.navbar', 0.5, {left: '-80px'}, '+=0.5');
     } else {
-      // switch (prevState.currentSlide) {
-      //   case 'welcome':
-      //       tl.to('.welcome', 0.5, {right: '-100vw'});
-      //     break;
-      //   default:
-      //     break;
-      // }
+      switch (prevState.currentSlide) {
+        case 'welcome':
+            tl.to('.welcome', 0.5, {right: '100vw'});
+          break;
+        default:
+          break;
+      }
     }
 
     switch (this.state.currentSlide) {
       case 'welcome':
-        tl.from('.welcome', 0.5, {right: '100vw'}, '+=0.5');
+        tl.to('.welcome', 0.5, {right: '0vw'}, '+=0.5');
         tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
         tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
         break;
@@ -44,13 +43,12 @@ class App extends React.Component {
     }
   }
 
-  currentSlide = slide => {
+  // removeSlide = (slide, tl) => {}
+
+  setCurrentSlide = slide => {
     if (this.state.currentSlide !== slide) {
       this.setState({currentSlide: slide})
     };
-
-
-
   }
 
   render() {
@@ -64,7 +62,7 @@ class App extends React.Component {
         </section> 
        
 
-        <Navbar currentSlide={this.currentSlide} />
+        <Navbar setCurrentSlide={this.setCurrentSlide} />
 
         <section className='page_section welcome'>
           <section className='content_side'>
@@ -73,12 +71,19 @@ class App extends React.Component {
             <button>Check our Menu Out</button>
           </section>
           <section className='image_side'>
-            {/* <img src='img/background.jpg' /> */}
           </section>
         </section>
 
-        <section className='page_section'>
+        <section className='page_section about'>
+          <h1>test</h1>
+        </section>
 
+        <section className='page_section menu'>
+          <h1>test</h1>
+        </section>
+
+        <section className='page_section contact'>
+          <h1>test</h1>
         </section>
 
         <section className='page_section' id='test'>
