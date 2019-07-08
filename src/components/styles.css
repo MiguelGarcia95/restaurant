@@ -44,6 +44,26 @@ body {
   top: -100vh;
 }
 
+.page_section .content_side .content-button {
+  width: 200px;
+  height: 80px;
+  position: absolute;
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-color: #232323;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.page_section .content_side .content-button p {
+  line-height: 80px;
+  margin: 0;
+  color: white;
+  font-size: 1.1em;
+}
+
 .page_section .content_side h1 {
   text-shadow: 1px 1px 1px white, 1px 1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px white, -1px -1px 5px rgba(0, 0, 0, 0.5);
   font-weight: 600;
@@ -62,11 +82,6 @@ body {
   font-size: 5em;
   text-transform: capitalize;
   text-align: center;
-}
-
-.page_section .content_side button {
-  border: none;
-  padding: 20px 50px;
 }
 
 .page_section .image_side {

@@ -6,6 +6,7 @@ class App extends React.Component {
   state = {
     loading: true,
     currentSlide: 'welcome',
+    increment: 0.5,
     tl: new window.TimelineMax()
   }
 
@@ -19,20 +20,19 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const {tl} = this.state;
+    const {tl, increment} = this.state;
     if (!this.state.loading && prevState.loading) {
-      tl.from('.navbar', 0.5, {left: '-80px'}, '+=0.5');
+      tl.from('.navbar', 0.5, {left: '-80px'}, `+=${increment}`);
     } else {
       switch (prevState.currentSlide) {
         case 'welcome':
-          tl.to('.image_side', 0.5, {bottom: '-100vh'},  '+=0.5');
-          tl.to('.content_side', 0.5, {top: '-100vh'},  '-=0.5');
-          tl.to('.welcome', 0.5, {right: '100vw'},  '+=0.5');
-          // tl.to('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
-          // tl.to('.content_side', 0.5, {top: '-100vh'},  '-=0.5');
+          tl.to('.image_side', 0.5, {bottom: '-100vh'},  `+=${increment}`);
+          tl.to('.content_side', 0.5, {top: '-100vh'},  `-=${increment}`);
+          tl.to('.welcome', 0.5, {right: '100vw'},  `+=${increment}`);
           break;
         case 'about':
-          tl.to('.about', 0.5, {right: '100vw'});
+          // tl.to('.about', 0.5, {right: '100vw'});
+          tl.to('.about', 0.5, {right: '100vw'}, '+=1');
           break;
         case 'menu':
           tl.to('.menu', 0.5, {right: '100vw'});
@@ -47,21 +47,18 @@ class App extends React.Component {
 
     switch (this.state.currentSlide) {
       case 'welcome':
-        tl.to('.welcome', 0.5, {right: '0vw'}, '+=0.5');
-        tl.to('.image_side', 0.5, {bottom: '0vh'}, '+=0.5');
-        tl.to('.content_side', 0.5, {top: '0vh'},  '-=0.5');
-        // tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
-        // tl.from('.content_side', 0.5, {top: '-100vh'},  '-=0.5');
+        tl.to('.welcome', 0.5, {right: '0vw'}, `+=${increment}`);
+        tl.to('.image_side', 0.5, {bottom: '0vh'}, `+=${increment}`);
+        tl.to('.content_side', 0.5, {top: '0vh'},  `-=${increment}`);
         break;
       case 'about':
-        tl.to('.about', 0.5, {right: '0vw'}, '+=1.5');
-        // tl.to('.about', 0.5, {right: '0vw'}, '+=2');
+        tl.to('.about', 0.5, {right: '0vw'}, `+=${increment}`);
         break;
       case 'menu':
-        tl.to('.menu', 0.5, {right: '0vw'}, '+=0.5');
+        tl.to('.menu', 0.5, {right: '0vw'}, `+=${increment}`);
         break;
       case 'contact':
-        tl.to('.contact', 0.5, {right: '0vw'}, '+=0.5');
+        tl.to('.contact', 0.5, {right: '0vw'}, `+=${increment}`);
         break;
       default:
         break;
@@ -93,7 +90,9 @@ class App extends React.Component {
           <section className='content_side'>
             <h1>Hungry?</h1>
             <h1>Get a bite</h1>
-            <button>Check our Menu Out</button>
+            <section className='content-button'>
+              <p>Check our Menu Out</p>
+            </section>
           </section>
           <section className='image_side'>
           </section>
