@@ -31,17 +31,14 @@ class App extends React.Component {
           tl.to('.content_side', 0.5, {top: '-100vh'},  `-=${increment}`);
           tl.to('.welcome', 0.5, {right: '100vw'},  `+=${increment}`);
           break;
-        // case 'about':
-        //   // tl.to('.about', 0.5, {right: '100vw'});
-        //   tl.to('.about', 0.5, {right: '100vw'}, '+=1');
-        //   break;
         case 'menu':
           tl.to('.menu_side', 0.5, {left: '-100vw'}, `+=${increment}`);
-          tl.to('.menu_image_side', 1, {left: '-100vw'},  `+=${increment}`);
+          tl.to('.menu_image_side', 0.7, {left: '-100vw'},  `+=${increment}`);
           tl.to('.menu', 0.5, {right: '100vw'}, `-=${increment}`);
           break;
         case 'contact':
-          tl.to('.contact', 0.5, {right: '100vw'});
+          tl.to('.contact_form', 0.5, {scale: 0}, `+=${increment}`);
+          tl.to('.contact', 0.5, {right: '100vw'}, `+=${increment}`);
           break;
         default:
           break;
@@ -54,9 +51,6 @@ class App extends React.Component {
         tl.to('.image_side', 0.5, {bottom: '0vh'}, `+=${increment}`);
         tl.to('.content_side', 0.5, {top: '0vh'},  `-=${increment}`);
         break;
-      // case 'about':
-      //   tl.to('.about', 0.5, {right: '0vw'}, `+=${increment}`);
-      //   break;
       case 'menu':
         tl.to('.menu', 0.5, {right: '0vw'}, `+=${increment}`);
         tl.to('.menu_image_side', 0.5, {left: 0},  `+=${increment}`);
@@ -64,6 +58,7 @@ class App extends React.Component {
         break;
       case 'contact':
         tl.to('.contact', 0.5, {right: '0vw'}, `+=${increment}`);
+        tl.to('.contact_form', 0.5, {scale: 1}, `+=${increment}`);
         break;
       default:
         break;

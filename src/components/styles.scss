@@ -168,7 +168,6 @@ textarea::placeholder {color: $bgColor;}
       width: 800px; 
       height: 400px;
       box-shadow: inset 0px 0px 10px $lightBgColor;
-      // background-color: $bgColor;
       box-sizing: border-box;
       padding: 25px;
       text-align: center;
@@ -176,6 +175,7 @@ textarea::placeholder {color: $bgColor;}
       bottom: 0; top: 0;
       left: 0; right: 0;
       margin: auto;
+      transform: scale(0);
       h1 {
         color: $bgColor;
         line-height: 50px;
