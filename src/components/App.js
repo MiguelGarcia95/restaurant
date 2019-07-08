@@ -5,7 +5,8 @@ import './styles.css';
 class App extends React.Component {
   state = {
     loading: true,
-    currentSlide: 'welcome'
+    currentSlide: 'welcome',
+    tl: new window.TimelineMax()
   }
 
   componentDidMount() {
@@ -18,21 +19,28 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    var tl = new window.TimelineMax();
+    // var tl = ;
+    const {tl} = this.state;
     if (!this.state.loading && prevState.loading) {
       tl.from('.navbar', 0.5, {left: '-80px'}, '+=0.5');
-      tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
-      tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
     } else {
-      switch (this.state.currentSlide) {
-        case 'welcome':
-          tl.reversed(true);
-          tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
-          tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
-          break;
-        default:
-          break;
-      }
+      // switch (prevState.currentSlide) {
+      //   case 'welcome':
+      //       tl.to('.welcome', 0.5, {right: '-100vw'});
+      //     break;
+      //   default:
+      //     break;
+      // }
+    }
+
+    switch (this.state.currentSlide) {
+      case 'welcome':
+        tl.from('.welcome', 0.5, {right: '100vw'}, '+=0.5');
+        tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
+        tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
+        break;
+      default:
+        break;
     }
   }
 
