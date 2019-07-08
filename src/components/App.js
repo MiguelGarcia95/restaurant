@@ -27,6 +27,15 @@ class App extends React.Component {
         case 'welcome':
             tl.to('.welcome', 0.5, {right: '100vw'});
           break;
+        case 'about':
+          tl.to('.about', 0.5, {right: '100vw'});
+          break;
+        case 'menu':
+          tl.to('.menu', 0.5, {right: '100vw'});
+          break;
+        case 'contact':
+          tl.to('.contact', 0.5, {right: '100vw'});
+          break;
         default:
           break;
       }
@@ -37,6 +46,15 @@ class App extends React.Component {
         tl.to('.welcome', 0.5, {right: '0vw'}, '+=0.5');
         tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
         tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
+        break;
+      case 'about':
+        tl.to('.about', 0.5, {right: '0vw'}, '+=0.5');
+        break;
+      case 'menu':
+        tl.to('.menu', 0.5, {right: '0vw'}, '+=0.5');
+        break;
+      case 'contact':
+        tl.to('.contact', 0.5, {right: '0vw'}, '+=0.5');
         break;
       default:
         break;
@@ -75,20 +93,20 @@ class App extends React.Component {
         </section>
 
         <section className='page_section about'>
-          <h1>test</h1>
+          <h1>about</h1>
         </section>
 
         <section className='page_section menu'>
-          <h1>test</h1>
+          <h1>menu</h1>
         </section>
 
         <section className='page_section contact'>
-          <h1>test</h1>
+          <h1>contact</h1>
         </section>
 
-        <section className='page_section' id='test'>
+        {/* <section className='page_section' id='test'>
           <h1>This slides in!</h1>
-        </section>
+        </section> */}
       </div>
     );
   }
