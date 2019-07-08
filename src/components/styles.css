@@ -229,6 +229,7 @@ textarea::placeholder {
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
   font-weight: 600;
+  margin: 25px 0;
 }
 
 .page_section.contact .contact_form .form .inputs {
@@ -239,17 +240,27 @@ textarea::placeholder {
 
 .page_section.contact .contact_form .form .inputs input {
   height: 50px;
-  margin: 25px 0;
   width: 100%;
 }
 
 .page_section.contact .contact_form .form textarea {
   width: 45%;
-  margin-top: 25px;
-  height: 250px;
+  height: 150px;
   float: right;
   padding: 25px;
   resize: none;
+}
+
+.page_section.contact .contact_form .form .form_button {
+  margin: 25px 0;
+  line-height: 50px;
+  height: 50px;
+  font-weight: 600;
+  width: 45%;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  float: right;
+  cursor: pointer;
 }
 
 #loading {

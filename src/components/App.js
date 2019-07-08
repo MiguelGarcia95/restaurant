@@ -145,6 +145,7 @@ class App extends React.Component {
                 <input type='text' placeholder='Subject' name='subject' autoComplete='off' />
               </section>
               <textarea name='message' placeholder="Tell us what's on your mind"></textarea>
+              <section className='form_button'><p>Send</p></section>
             </section>
           </section>
         </section>
