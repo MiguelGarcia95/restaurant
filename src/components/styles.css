@@ -25,11 +25,7 @@ body {
   margin: 0;
 }
 
-.page_section.about {
-  background-color: red;
-}
-
-.page_section .content_side {
+.page_section.welcome .content_side {
   position: absolute;
   height: 100vh;
   background-color: #f0f0f0;
@@ -44,7 +40,7 @@ body {
   top: -100vh;
 }
 
-.page_section .content_side .content-button {
+.page_section.welcome .content_side .content-button {
   width: 210px;
   height: 70px;
   position: absolute;
@@ -57,7 +53,7 @@ body {
   text-align: center;
 }
 
-.page_section .content_side .content-button p {
+.page_section.welcome .content_side .content-button p {
   line-height: 70px;
   margin: 0;
   color: #232323;
@@ -67,7 +63,7 @@ body {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), 1px 1px 5px white, -1px -1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px white;
 }
 
-.page_section .content_side h1 {
+.page_section.welcome .content_side h1 {
   text-shadow: 1px 1px 1px white, 1px 1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px white, -1px -1px 5px rgba(0, 0, 0, 0.5);
   font-weight: 600;
   color: #232323;
@@ -76,27 +72,58 @@ body {
   margin-top: 100px;
 }
 
-.page_section .content_side h1:first-of-type {
+.page_section.welcome .content_side h1:first-of-type {
   font-size: 3em;
   margin-left: 100px;
 }
 
-.page_section .content_side h1:last-of-type {
+.page_section.welcome .content_side h1:last-of-type {
   font-size: 5em;
   text-transform: capitalize;
   text-align: center;
 }
 
-.page_section .image_side {
+.page_section.welcome .image_side {
   position: absolute;
   height: 100vh;
-  background: url("/img/background.jpg") no-repeat center;
+  background-repeat: no-repeat;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  background: url("/img/background.jpg");
   width: 40%;
   right: 0;
   z-index: 1;
   bottom: -100vh;
+}
+
+.page_section.menu .menu_side {
+  position: absolute;
+  height: 100vh;
+  background-color: #f0f0f0;
+  width: 60%;
+  padding-left: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  right: 0;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  bottom: -100vh;
+}
+
+.page_section.menu .menu_image_side {
+  position: absolute;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background: url("/img/background.jpg");
+  left: 0;
+  width: 40%;
+  z-index: 1;
+  top: -100vh;
 }
 
 #loading {

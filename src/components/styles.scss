@@ -25,6 +25,12 @@ body {
   position: absolute;
   height: $fullHeight;
 }
+@mixin backgroundImage {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 .page_section {
   @include page_section;
@@ -34,76 +40,97 @@ body {
   h1 {
     margin: 0;
   }
-  // &.welcome {}
-  &.about {background-color: red;}
-
-  .content_side {
-    @include welcomeSide;
-    background-color: rgb(240, 240, 240);
-    width: 60%;
-    padding-left: 80px;
-    box-sizing: border-box;
-    left: 0;
-    box-shadow: 0px 0px 10px 5px $lightBgColor;
-    z-index: 2;
-    top: -100vh;
-
-    .content-button {
-      width: 210px;
-      height: 70px;
-      position: absolute;
-      box-shadow: inset 0px 0px 10px $lightBgColor;
-      // background-color: $bgColor;
-      bottom: 100px;
-      left: 0; right: 0;
-      margin: auto;
-      text-align: center;
-      p {
-        line-height: 70px;
-        margin: 0;
-        // color: white;
-        color: $bgColor;
-        font-size: 1em;
+  &.welcome {
+    .content_side {
+      @include welcomeSide;
+      background-color: rgb(240, 240, 240);
+      width: 60%;
+      padding-left: 80px;
+      box-sizing: border-box;
+      left: 0;
+      box-shadow: 0px 0px 10px 5px $lightBgColor;
+      z-index: 2;
+      top: -100vh;
+  
+      .content-button {
+        width: 210px;
+        height: 70px;
+        position: absolute;
+        box-shadow: inset 0px 0px 10px $lightBgColor;
+        // background-color: $bgColor;
+        bottom: 100px;
+        left: 0; right: 0;
+        margin: auto;
+        text-align: center;
+        p {
+          line-height: 70px;
+          margin: 0;
+          // color: white;
+          color: $bgColor;
+          font-size: 1em;
+          font-weight: 600;
+          cursor: pointer;
+          text-shadow: 1px 1px 1px $lightBgColor,
+                       1px 1px 5px  white,
+                      -1px -1px 5px $lightBgColor,
+                      -1px -1px 5px white;
+        }
+      }
+  
+      h1 {
+        text-shadow: 1px 1px 1px white,
+                     1px 1px 5px $lightBgColor,
+                     -1px -1px 5px white,
+                     -1px -1px 5px $lightBgColor;
         font-weight: 600;
-        cursor: pointer;
-        text-shadow: 1px 1px 1px $lightBgColor,
-                     1px 1px 5px  white,
-                    -1px -1px 5px $lightBgColor,
-                    -1px -1px 5px white;
+        color: $bgColor;
+        margin: 0;
+        text-transform: uppercase;
+        margin-top: 100px;
+      }
+      h1:first-of-type {
+        font-size: 3em;
+        margin-left: 100px;
+      }
+      h1:last-of-type {
+        font-size: 5em;
+        text-transform: capitalize;
+        text-align: center;
       }
     }
-
-    h1 {
-      text-shadow: 1px 1px 1px white,
-                   1px 1px 5px $lightBgColor,
-                   -1px -1px 5px white,
-                   -1px -1px 5px $lightBgColor;
-      font-weight: 600;
-      color: $bgColor;
-      margin: 0;
-      text-transform: uppercase;
-      margin-top: 100px;
-    }
-    h1:first-of-type {
-      font-size: 3em;
-      margin-left: 100px;
-    }
-    h1:last-of-type {
-      font-size: 5em;
-      text-transform: capitalize;
-      text-align: center;
+    
+    .image_side {
+      @include welcomeSide;
+      @include backgroundImage;
+      background: url('/img/background.jpg');
+      width: 40%; 
+      right: 0;
+      z-index: 1;
+      bottom: -100vh;
     }
   }
-  
-  .image_side {
-    @include welcomeSide;
-    background: url('/img/background.jpg') no-repeat center;
-    background-attachment: fixed;
-    background-size: cover;
-    width: 40%; 
-    right: 0;
-    z-index: 1;
-    bottom: -100vh;
+  // &.about {background-color: red;}
+  &.menu {
+    .menu_side {
+      @include welcomeSide;
+      background-color: rgb(240, 240, 240);
+      width: 60%;
+      padding-left: 80px;
+      box-sizing: border-box;
+      right: 0;
+      box-shadow: 0px 0px 10px 5px $lightBgColor;
+      z-index: 2;
+      bottom: -100vh;
+    }
+    .menu_image_side {
+      @include welcomeSide;
+      @include backgroundImage;
+      background: url('/img/background.jpg');
+      left: 0;
+      width: 40%; 
+      z-index: 1;
+      top: -100vh;
+    }
   }
 }
 

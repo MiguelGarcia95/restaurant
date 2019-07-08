@@ -105,7 +105,11 @@ class App extends React.Component {
         </section> */}
 
         <section className='page_section menu'>
-          <h1>menu</h1>
+          <section className='menu_image_side'>
+          </section>
+          <section className='menu_side'>
+            <h1>menu</h1>
+          </section>
         </section>
 
         <section className='page_section contact'>
