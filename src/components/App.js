@@ -66,8 +66,6 @@ class App extends React.Component {
 
   }
 
-  // removeSlide = (slide, tl) => {}
-
   setCurrentSlide = slide => {
     if (this.state.currentSlide !== slide) {
       this.setState({currentSlide: slide})
@@ -98,11 +96,7 @@ class App extends React.Component {
           <section className='image_side'>
           </section>
         </section>
-
-        {/* <section className='page_section about'>
-          <h1>about</h1>
-        </section> */}
-
+        
         <section className='page_section menu'>
           <section className='menu_image_side'>
             <section className='cube shaded'></section>
