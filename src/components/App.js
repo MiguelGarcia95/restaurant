@@ -25,7 +25,11 @@ class App extends React.Component {
     } else {
       switch (prevState.currentSlide) {
         case 'welcome':
-          tl.to('.welcome', 0.5, {right: '100vw'});
+          tl.to('.image_side', 0.5, {bottom: '-100vh'},  '+=0.5');
+          tl.to('.content_side', 0.5, {top: '-100vh'},  '-=0.5');
+          tl.to('.welcome', 0.5, {right: '100vw'},  '+=0.5');
+          // tl.to('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
+          // tl.to('.content_side', 0.5, {top: '-100vh'},  '-=0.5');
           break;
         case 'about':
           tl.to('.about', 0.5, {right: '100vw'});
@@ -44,11 +48,14 @@ class App extends React.Component {
     switch (this.state.currentSlide) {
       case 'welcome':
         tl.to('.welcome', 0.5, {right: '0vw'}, '+=0.5');
-        tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
-        tl.from('.content_side', 0.5, {top: '-100vh'},  '+=0.5');
+        tl.to('.image_side', 0.5, {bottom: '0vh'}, '+=0.5');
+        tl.to('.content_side', 0.5, {top: '0vh'},  '-=0.5');
+        // tl.from('.image_side', 0.5, {bottom: '-100vh'}, '+=0.5');
+        // tl.from('.content_side', 0.5, {top: '-100vh'},  '-=0.5');
         break;
       case 'about':
-        tl.to('.about', 0.5, {right: '0vw'}, '+=0.5');
+        // tl.to('.about', 0.5, {right: '0vw'}, '+=0.5');
+        tl.to('.about', 0.5, {right: '0vw'}, '+=2.5');
         break;
       case 'menu':
         tl.to('.menu', 0.5, {right: '0vw'}, '+=0.5');
@@ -70,7 +77,7 @@ class App extends React.Component {
   }
 
   render() {
-    // const {loading} = this.state;
+    const {currentSlide} = this.state;
     
     return (
       <div className="app">
@@ -80,7 +87,7 @@ class App extends React.Component {
         </section> 
        
 
-        <Navbar setCurrentSlide={this.setCurrentSlide} />
+        <Navbar setCurrentSlide={this.setCurrentSlide} currentSlide={currentSlide} />
 
         <section className='page_section welcome'>
           <section className='content_side'>

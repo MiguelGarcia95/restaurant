@@ -37,6 +37,7 @@ body {
   -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
   z-index: 2;
+  top: -100vh;
 }
 
 .page_section .content_side h1 {
@@ -73,6 +74,7 @@ body {
   width: 40%;
   right: 0;
   z-index: 1;
+  bottom: -100vh;
 }
 
 #test {

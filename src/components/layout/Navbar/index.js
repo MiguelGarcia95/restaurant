@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-function Navbar({setCurrentSlide}) {
+function Navbar({setCurrentSlide, currentSlide}) {
   return (
     <section className='navbar'>
       <span onClick={() => setCurrentSlide('welcome')} ><p>Welcome</p></span>
