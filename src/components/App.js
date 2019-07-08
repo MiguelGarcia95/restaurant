@@ -7,6 +7,7 @@ class App extends React.Component {
     loading: true,
     currentSlide: 'welcome',
     increment: 0.5,
+    firstLoad: true,
     tl: new window.TimelineMax()
   }
 
@@ -30,10 +31,10 @@ class App extends React.Component {
           tl.to('.content_side', 0.5, {top: '-100vh'},  `-=${increment}`);
           tl.to('.welcome', 0.5, {right: '100vw'},  `+=${increment}`);
           break;
-        case 'about':
-          // tl.to('.about', 0.5, {right: '100vw'});
-          tl.to('.about', 0.5, {right: '100vw'}, '+=1');
-          break;
+        // case 'about':
+        //   // tl.to('.about', 0.5, {right: '100vw'});
+        //   tl.to('.about', 0.5, {right: '100vw'}, '+=1');
+        //   break;
         case 'menu':
           tl.to('.menu', 0.5, {right: '100vw'});
           break;
@@ -51,9 +52,9 @@ class App extends React.Component {
         tl.to('.image_side', 0.5, {bottom: '0vh'}, `+=${increment}`);
         tl.to('.content_side', 0.5, {top: '0vh'},  `-=${increment}`);
         break;
-      case 'about':
-        tl.to('.about', 0.5, {right: '0vw'}, `+=${increment}`);
-        break;
+      // case 'about':
+      //   tl.to('.about', 0.5, {right: '0vw'}, `+=${increment}`);
+      //   break;
       case 'menu':
         tl.to('.menu', 0.5, {right: '0vw'}, `+=${increment}`);
         break;
@@ -63,6 +64,7 @@ class App extends React.Component {
       default:
         break;
     }
+
   }
 
   // removeSlide = (slide, tl) => {}
@@ -98,9 +100,9 @@ class App extends React.Component {
           </section>
         </section>
 
-        <section className='page_section about'>
+        {/* <section className='page_section about'>
           <h1>about</h1>
-        </section>
+        </section> */}
 
         <section className='page_section menu'>
           <h1>menu</h1>
