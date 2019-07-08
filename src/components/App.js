@@ -57,6 +57,8 @@ class App extends React.Component {
       //   break;
       case 'menu':
         tl.to('.menu', 0.5, {right: '0vw'}, `+=${increment}`);
+        tl.to('.menu_side', 0.5, {top: '0vh'}, `+=${increment}`);
+        tl.to('.menu_image_side', 0.5, {top: '0vh'},  `-=${increment}`);
         break;
       case 'contact':
         tl.to('.contact', 0.5, {right: '0vw'}, `+=${increment}`);
@@ -106,6 +108,25 @@ class App extends React.Component {
 
         <section className='page_section menu'>
           <section className='menu_image_side'>
+            <section className='cube shaded'></section>
+            <section className='cube'></section>
+            <section className='cube'></section>
+            <section className='cube shaded'></section>
+            <section className='cube shaded'></section>
+            <section className='cube'></section>
+            <section className='cube'></section>
+            <section className='cube shaded'></section>
+            <section className='cube shaded'></section>
+            <section className='cube'></section>
+            <section className='cube'></section>
+            <section className='cube shaded'></section>
+            <section className='cube shaded'></section>
+            <section className='cube'></section>
+            <section className='cube'></section>
+            <section className='cube shaded'></section>
+            <section className='cube shaded'></section>
+            <section className='cube'></section>
+            <section className='cube'></section>
           </section>
           <section className='menu_side'>
             <h1>menu</h1>
