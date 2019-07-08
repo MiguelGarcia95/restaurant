@@ -64,7 +64,12 @@ body {
         // color: white;
         color: $bgColor;
         font-size: 1em;
+        font-weight: 600;
         cursor: pointer;
+        text-shadow: 1px 1px 1px $lightBgColor,
+                     1px 1px 5px  white,
+                    -1px -1px 5px $lightBgColor,
+                    -1px -1px 5px white;
       }
     }
 

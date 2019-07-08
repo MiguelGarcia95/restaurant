@@ -90,7 +90,7 @@ class App extends React.Component {
           <section className='content_side'>
             <h1>Hungry?</h1>
             <h1>Get a bite</h1>
-            <section className='content-button'>
+            <section className='content-button' onClick={() => this.setCurrentSlide('menu')}>
               <p>Check our Menu Out</p>
             </section>
           </section>
