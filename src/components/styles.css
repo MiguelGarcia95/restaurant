@@ -5,6 +5,50 @@ body {
   overflow-x: hidden;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input, textarea {
+  font-family: "Montserrat";
+  color: white;
+}
+
+input::-webkit-input-placeholder {
+  color: white;
+}
+
+input:-ms-input-placeholder {
+  color: white;
+}
+
+input::-ms-input-placeholder {
+  color: white;
+}
+
+input::placeholder {
+  color: white;
+}
+
+textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+textarea:-ms-input-placeholder {
+  color: white;
+}
+
+textarea::-ms-input-placeholder {
+  color: white;
+}
+
+textarea::placeholder {
+  color: white;
+}
+
 .page_section {
   background-color: #232323;
   width: 100vw;
@@ -137,6 +181,70 @@ body {
 
 .page_section.menu .menu_image_side .cube.shaded {
   background-color: rgba(26, 26, 26, 0.5);
+}
+
+.page_section.contact .contact_form {
+  width: 800px;
+  height: 400px;
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 25px;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.page_section.contact .contact_form h1 {
+  color: white;
+  line-height: 50px;
+  font-size: 2em;
+  margin: 0;
+  height: 50px;
+  font-weight: 300;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), 1px 1px 1px white, -1px -1px 15px rgba(0, 0, 0, 0.5), -1px -1px 5px white;
+}
+
+.page_section.contact .contact_form .form {
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.page_section.contact .contact_form .form input, .page_section.contact .contact_form .form textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  text-align: center;
+  background-color: transparent;
+  -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+.page_section.contact .contact_form .form .inputs {
+  width: 45%;
+  height: 100%;
+  float: left;
+}
+
+.page_section.contact .contact_form .form .inputs input {
+  height: 50px;
+  margin: 25px 0;
+  width: 100%;
+}
+
+.page_section.contact .contact_form .form textarea {
+  width: 45%;
+  margin-top: 25px;
+  height: 250px;
+  float: right;
+  padding: 25px;
+  resize: none;
 }
 
 #loading {

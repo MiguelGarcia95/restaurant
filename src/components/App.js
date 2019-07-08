@@ -138,12 +138,15 @@ class App extends React.Component {
         <section className='page_section contact'>
           <section className='contact_form'>
             <h1>Contact Me</h1>
-            <form>
-              <input type='text' placeholder='Name' name='name' />
-              <input type='email' placeholder='Email' name='email' />
-              <input type='text' placeholder='Subject' name='subject' />
+            <section className='form'>
+              <section className='inputs'>
+                <input type='text' placeholder='Name' name='name' autoComplete='off' />
+                <input type='email' placeholder='Email' name='email' autoComplete='off' />
+                <input type='text' placeholder='Subject' name='subject' autoComplete='off' />
+              </section>
               <textarea name='message' placeholder="Tell us what's on your mind"></textarea>
-            </form>
+            </section>
+            {/* <form></form> */}
           </section>
         </section>
 

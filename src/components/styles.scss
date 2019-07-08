@@ -10,6 +10,27 @@ body {
   overflow-x: hidden;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input, textarea {font-family: $font; color: white;}
+input::-webkit-input-placeholder {color: white;}
+input:-moz-placeholder {color: white; opacity: 1;}
+input::-moz-placeholder {color: white; opacity: 1;}
+input:-ms-input-placeholder {color: white;}
+input::-ms-input-placeholder {color: white;}
+input::placeholder {color: white;}
+textarea::-webkit-input-placeholder {color: white;}
+textarea:-moz-placeholder {color: white; opacity: 1;}
+textarea::-moz-placeholder {color: white; opacity: 1;}
+textarea:-ms-input-placeholder {color: white;}
+textarea::-ms-input-placeholder {color: white;}
+textarea::placeholder {color: white;}
+
 @mixin page_section {
   background-color: $bgColor;
   width: 100vw;
@@ -57,7 +78,6 @@ body {
         height: 70px;
         position: absolute;
         box-shadow: inset 0px 0px 10px $lightBgColor;
-        // background-color: $bgColor;
         bottom: 100px;
         left: 0; right: 0;
         margin: auto;
@@ -137,6 +157,61 @@ body {
         background-color: rgba(187, 187, 187, 0.5);
         &.shaded {
           background-color: rgba(26, 26, 26,0.5);
+        }
+      }
+    }
+  }
+
+  &.contact {
+    .contact_form {
+      width: 800px; 
+      height: 400px;
+      box-shadow: inset 0px 0px 10px $lightBgColor;
+      box-sizing: border-box;
+      padding: 25px;
+      text-align: center;
+      position: absolute;
+      bottom: 0; top: 0;
+      left: 0; right: 0;
+      margin: auto;
+      h1 {
+        color: white;
+        line-height: 50px;
+        font-size: 2em;
+        margin: 0;
+        height: 50px;
+        font-weight: 300;
+        text-shadow: 1px 1px 1px $lightBgColor,
+                     1px 1px 1px  white,
+                    -1px -1px 15px $lightBgColor,
+                    -1px -1px 5px white;
+      }
+      .form {
+        width: 100%; height: 300px;
+        position: relative;
+        input, textarea {
+          box-sizing: border-box;
+          border: none;
+          text-align: center;
+          background-color: transparent;
+          box-shadow: 0px 0px 10px 1px $lightBgColor;
+        }
+        .inputs {
+          width: 45%; height: 100%;
+          float: left;
+          input {
+            height: 50px;
+            margin: 25px 0;
+            width: 100%;
+          }
+        }
+        textarea {
+          width: 45%; 
+          margin-top: 25px;
+          height: 250px;
+          float: right;
+          padding: 25px;
+          resize: none;
         }
       }
     }
