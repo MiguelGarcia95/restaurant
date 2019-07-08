@@ -34,6 +34,7 @@ body {
     margin: 0;
   }
   // &.welcome {}
+  &.about {background-color: red;}
 
   .content_side {
     @include welcomeSide;
@@ -83,11 +84,11 @@ body {
   }
 }
 
-#test {
-  position: relative;
-  background-color: yellow;
-  height: 100vh;
-}
+// #test {
+//   position: relative;
+//   background-color: yellow;
+//   height: 100vh;
+// }
 
 #loading {
   width: 100%;
