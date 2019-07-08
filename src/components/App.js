@@ -36,7 +36,9 @@ class App extends React.Component {
         //   tl.to('.about', 0.5, {right: '100vw'}, '+=1');
         //   break;
         case 'menu':
-          tl.to('.menu', 0.5, {right: '100vw'});
+          tl.to('.menu_side', 0.5, {left: '-100vw'}, `+=${increment}`);
+          tl.to('.menu_image_side', 0.5, {left: '-100vw'},  `-=${increment}`);
+          tl.to('.menu', 0.5, {right: '100vw'}, `+=${increment}`);
           break;
         case 'contact':
           tl.to('.contact', 0.5, {right: '100vw'});
@@ -57,8 +59,8 @@ class App extends React.Component {
       //   break;
       case 'menu':
         tl.to('.menu', 0.5, {right: '0vw'}, `+=${increment}`);
-        tl.to('.menu_side', 0.5, {top: '0vh'}, `+=${increment}`);
-        tl.to('.menu_image_side', 0.5, {top: '0vh'},  `-=${increment}`);
+        tl.to('.menu_image_side', 0.5, {left: '0vw'},  `+=${increment}`);
+        tl.to('.menu_side', 0.5, {left: '0vw'}, `-=${increment}`);
         break;
       case 'contact':
         tl.to('.contact', 0.5, {right: '0vw'}, `+=${increment}`);
