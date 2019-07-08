@@ -152,6 +152,74 @@ textarea::placeholder {
   left: -100vw;
 }
 
+.page_section.menu .menu_side .menu_header {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 50px;
+  text-align: center;
+}
+
+.page_section.menu .menu_side .menu_header h1 {
+  color: #232323;
+  line-height: 80px;
+  font-size: 2em;
+  margin: 0;
+  height: 80px;
+  text-transform: capitalize;
+  font-weight: 300;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), 1px 1px 1px white, -1px -1px 15px rgba(0, 0, 0, 0.5), -1px -1px 5px white;
+}
+
+.page_section.menu .menu_side .menu_header p {
+  font-size: 1.2em;
+}
+
+.page_section.menu .menu_side .menu_items {
+  width: 100%;
+}
+
+.page_section.menu .menu_side .menu_items .menu_item {
+  width: 30%;
+  float: left;
+  margin: 0px 1.6%;
+  height: 200px;
+  background-color: red;
+}
+
+.page_section.menu .menu_side .menu_items .menu_item .item_image {
+  width: 100%;
+  height: 150px;
+  background-color: green;
+  position: relative;
+}
+
+.page_section.menu .menu_side .menu_items .menu_item .item_image .item_price {
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 0.9em;
+  line-height: 30px;
+  width: 50px;
+  text-align: center;
+}
+
+.page_section.menu .menu_side .menu_items .menu_item .item_description {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+}
+
+.page_section.menu .menu_side .menu_items .menu_item .item_description .item_title {
+  line-height: 50px;
+  font-size: 1em;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .page_section.menu .menu_image_side {
   position: absolute;
   height: 100vh;
