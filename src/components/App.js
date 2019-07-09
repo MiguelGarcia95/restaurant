@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './layout/Navbar';
+import Loading from './layout/Loading';
 import Contact from './slides/Contact';
 import Menu from './slides/Menu';
 import Welcome from './slides/Welcome';
@@ -82,18 +83,11 @@ class App extends React.Component {
     
     return (
       <div className="app">
-        
-        <section id='loading'>
-          <img src='img/spinner.svg' alt='loading logo' />
-        </section> 
-       
-
+        <Loading />
         <Navbar setCurrentSlide={this.setCurrentSlide} currentSlide={currentSlide} />
 
         <Welcome setCurrentSlide={this.setCurrentSlide} />
-
         <Menu />
-
         <Contact />
       </div>
     );
