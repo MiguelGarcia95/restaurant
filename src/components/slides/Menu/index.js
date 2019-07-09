@@ -70,6 +70,17 @@ function Menu() {
 
       <section className={`fullscreen_menu ${menu && 'opened'}`}>
         <section className='exit' ><i onClick={toggleMenu} className="fas fa-times fa-2x"></i></section>
+
+        <section className='full_menu_items'>
+          <section className='full_menu_item'>
+            <section className='item_image'>
+              <p className='item_price'>$9.99</p>
+            </section>
+            <section className='item_description'>
+              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
+            </section>
+          </section>
+        </section>
       </section>
     </React.Fragment>
   )
