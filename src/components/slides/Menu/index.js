@@ -1,36 +1,20 @@
 import React, {useState } from 'react';
+import MenuItem from '../../layout/MenuItem';
 import './styles.css';
 
 function Menu() {
   const [menu, setMenu] = useState(false);
-  const [menuItem, setMenuItem] = useState(false);
+  const [menuItem, setToggleMenuItem] = useState(false);
+  const [currentMenuItem, setCurrentMenuItem] = useState(null);
   const toggleMenu = () => setMenu(!menu);
-  const toggleMenuItem = () => setMenuItem(!menuItem);
-
+  const toggleMenuItem = () => setToggleMenuItem(!menuItem);
+  const displayMenuItems = () => {
+    return [1,2,3,4,5].map(item => <MenuItem key={item} toggleMenuItem={toggleMenuItem} setMenuItem={toggleMenuItem} /> )
+  }
   return (
     <React.Fragment>
       <section className='page_section menu'>
-        <section className='menu_image_side'>
-          <section className='cube shaded'></section>
-          <section className='cube'></section>
-          <section className='cube'></section>
-          <section className='cube shaded'></section>
-          <section className='cube shaded'></section>
-          <section className='cube'></section>
-          <section className='cube'></section>
-          <section className='cube shaded'></section>
-          <section className='cube shaded'></section>
-          <section className='cube'></section>
-          <section className='cube'></section>
-          <section className='cube shaded'></section>
-          <section className='cube shaded'></section>
-          <section className='cube'></section>
-          <section className='cube'></section>
-          <section className='cube shaded'></section>
-          <section className='cube shaded'></section>
-          <section className='cube'></section>
-          <section className='cube'></section>
-        </section>
+        <section className='menu_image_side'></section>
         <section className='menu_side'>
           <section className='menu_header'>
             <h1>Our Menu</h1>
@@ -98,200 +82,7 @@ function Menu() {
         </section>
 
         <section className='full_menu_items'>
-
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg" onClick={() => toggleMenuItem()} ></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-          <section className='full_menu_item'>
-            <section className='item_image'>
-              <img src='img/background.jpg' alt='menu item' />
-              <p className='item_price'>$9.99</p>
-              <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
-              </section>
-            </section>
-            <section className='item_description'>
-              <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-            </section>
-          </section>
-
+          {displayMenuItems()}
         </section>
 
       </section>

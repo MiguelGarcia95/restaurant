@@ -145,7 +145,7 @@
           transform: scale(0);
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: rebeccapurple;
+  background-color: #f0f0f0;
   position: absolute;
   z-index: 99;
   overflow-y: scroll;
@@ -166,7 +166,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: rebeccapurple;
+  background-color: #f0f0f0;
   z-index: 3;
 }
 
@@ -215,16 +215,10 @@
   margin: 0;
 }
 
-.fullscreen_menu .header .header_menu .menu_nav .menu_nav_item:hover {
+.fullscreen_menu .header .header_menu .menu_nav .menu_nav_item:hover, .fullscreen_menu .header .header_menu .menu_nav .menu_nav_item.active {
   -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
           box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-  color: white;
-}
-
-.fullscreen_menu .header .header_menu .menu_nav .menu_nav_item.active {
-  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-  color: white;
+  font-weight: 600;
 }
 
 .fullscreen_menu .fullscreen_item {
@@ -315,67 +309,5 @@
   position: absolute;
   top: 0;
   z-index: 2;
-}
-
-.fullscreen_menu .full_menu_items .full_menu_item {
-  width: 23%;
-  float: left;
-  margin: 20px 1%;
-  height: 200px;
-}
-
-.fullscreen_menu .full_menu_items .full_menu_item .item_image {
-  position: relative;
-  height: 150px;
-  width: 100%;
-  text-align: center;
-}
-
-.fullscreen_menu .full_menu_items .full_menu_item .item_image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.fullscreen_menu .full_menu_items .full_menu_item .item_image .item_open {
-  width: 40px;
-  height: 40px;
-  background-color: red;
-  text-align: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.fullscreen_menu .full_menu_items .full_menu_item .item_image .item_open i {
-  margin-top: 12px;
-}
-
-.fullscreen_menu .full_menu_items .full_menu_item .item_image .item_price {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: red;
-  margin: 0;
-  line-height: 30px;
-  width: 50px;
-  font-size: 0.9em;
-}
-
-.fullscreen_menu .full_menu_items .full_menu_item .item_description {
-  height: 50px;
-  text-align: center;
-  background-color: red;
-}
-
-.fullscreen_menu .full_menu_items .full_menu_item .item_description .item_title {
-  height: 50px;
-  line-height: 50px;
-  margin: 0 10px;
-  font-size: 1em;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
 }
 /*# sourceMappingURL=styles.css.map */
