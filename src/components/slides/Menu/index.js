@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useState } from 'react';
 import './styles.css';
 
-function Menu({menu}) {
+function Menu() {
+  const [menu, setMenu] = useState(false);
+  const toggleMenu = () => setMenu(!menu);
+  
   return (
     <React.Fragment>
       <section className='page_section menu'>
@@ -59,14 +62,14 @@ function Menu({menu}) {
             </section>
 
           </section>
-          <section className='item_more'>
+          <section className='item_more' onClick={toggleMenu}>
             <p>Open Menu</p>
           </section>
         </section>
       </section>
 
       <section className={`fullscreen_menu ${menu && 'opened'}`}>
-
+        <section className='exit' ><i onClick={toggleMenu} className="fas fa-times"></i></section>
       </section>
     </React.Fragment>
   )

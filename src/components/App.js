@@ -87,7 +87,7 @@ class App extends React.Component {
         <Navbar setCurrentSlide={this.setCurrentSlide} currentSlide={currentSlide} />
 
         <Welcome setCurrentSlide={this.setCurrentSlide} />
-        <Menu menu={menu} />
+        <Menu menu={menu} toggleMenu={this.toggleMenu} />
         <Contact />
       </div>
     );

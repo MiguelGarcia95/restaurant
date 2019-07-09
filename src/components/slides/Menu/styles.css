@@ -129,4 +129,32 @@
 .menu .menu_image_side .cube.shaded {
   background-color: rgba(26, 26, 26, 0.5);
 }
+
+.fullscreen_menu {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: rebeccapurple;
+  position: fixed;
+}
+
+.fullscreen_menu.opened {
+  z-index: 99;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.fullscreen_menu .exit {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+}
+
+.fullscreen_menu .exit i {
+  margin: auto;
+}
 /*# sourceMappingURL=styles.css.map */
