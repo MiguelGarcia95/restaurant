@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from './layout/Navbar';
+import Contact from './slides/Contact';
 import './styles.css';
 
 class App extends React.Component {
@@ -8,6 +9,7 @@ class App extends React.Component {
     currentSlide: 'welcome',
     increment: 0.5,
     firstLoad: true,
+    menu: false,
     tl: new window.TimelineMax()
   }
 
@@ -63,8 +65,9 @@ class App extends React.Component {
       default:
         break;
     }
-
   }
+ 
+  toggleMenu = () => this.setState({menu: !this.state.menu});
 
   setCurrentSlide = slide => {
     if (this.state.currentSlide !== slide) {
@@ -73,7 +76,7 @@ class App extends React.Component {
   }
 
   render() {
-    const {currentSlide} = this.state;
+    const {currentSlide, menu} = this.state;
     
     return (
       <div className="app">
@@ -158,20 +161,7 @@ class App extends React.Component {
           </section>
         </section>
 
-        <section className='page_section contact'>
-          <section className='contact_form'>
-            <h1>Contact Us</h1>
-            <section className='form'>
-              <section className='inputs'>
-                <input type='text' placeholder='Name' name='name' autoComplete='off' />
-                <input type='email' placeholder='Email' name='email' autoComplete='off' />
-                <input type='text' placeholder='Subject' name='subject' autoComplete='off' />
-              </section>
-              <textarea name='message' placeholder="Tell us what's on your mind"></textarea>
-              <section className='form_button'><p>Send</p></section>
-            </section>
-          </section>
-        </section>
+        <Contact />
       </div>
     );
   }
