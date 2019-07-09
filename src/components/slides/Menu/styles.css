@@ -56,6 +56,13 @@
   position: relative;
 }
 
+.menu .menu_side .menu_items .menu_item .item_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .menu .menu_side .menu_items .menu_item .item_image .item_price {
   background-color: red;
   position: absolute;
@@ -237,14 +244,66 @@
   height: 100vh;
 }
 
+.fullscreen_menu .fullscreen_item .exit {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  z-index: 3;
+  left: 0;
+}
+
+.fullscreen_menu .fullscreen_item .exit i {
+  margin-top: 9px;
+  cursor: pointer;
+}
+
 .fullscreen_menu .fullscreen_item .fullscreen_item_container {
   width: 800px;
-  margin: auto;
   -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
           box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 20px;
+  padding: 25px;
+  text-align: center;
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.fullscreen_menu .fullscreen_item .fullscreen_item_container .fullscreen_item_image {
+  width: 80%;
+  height: 250px;
+  margin: auto;
+}
+
+.fullscreen_menu .fullscreen_item .fullscreen_item_container .fullscreen_item_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.fullscreen_menu .fullscreen_item .fullscreen_item_container .item_title {
+  font-size: 1.3em;
+  line-height: 60px;
+  margin: 0 auto;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.fullscreen_menu .fullscreen_item .fullscreen_item_container .item_desc {
+  width: 80%;
+  margin: 15px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .fullscreen_menu .full_menu_items {
@@ -270,6 +329,13 @@
   height: 150px;
   width: 100%;
   text-align: center;
+}
+
+.fullscreen_menu .full_menu_items .full_menu_item .item_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .fullscreen_menu .full_menu_items .full_menu_item .item_image .item_open {
