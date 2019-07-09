@@ -3,7 +3,9 @@ import './styles.css';
 
 function Menu() {
   const [menu, setMenu] = useState(false);
+  const [menuItem, setMenuItem] = useState(false);
   const toggleMenu = () => setMenu(!menu);
+  const toggleMenuItem = () => setMenuItem(!menuItem);
 
   return (
     <React.Fragment>
@@ -87,7 +89,7 @@ function Menu() {
             <section className='item_image'>
               <p className='item_price'>$9.99</p>
               <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg"></i>
+              <i className="fas fa-info-circle fa-lg" onClick={toggleMenuItem} ></i>
               </section>
             </section>
             <section className='item_description'>
@@ -262,6 +264,17 @@ function Menu() {
 
         </section>
 
+      </section>
+
+      <section className={`fullscreen_item ${menuItem && 'opened'}`}>
+        <section className='fullscreen_item_container'>
+          <section className='exit' ><i onClick={toggleMenuItem} className="fas fa-times fa-2x"></i></section>
+          <section className='fullscreen_item_image'>
+            {/* <img src='image.jpg' /> */}
+          </section>
+          <h1 className='item_title'>Straberry Vodka chocolate Cake</h1>
+          <p className='item_desc'>What the food is.</p>
+        </section>
       </section>
     </React.Fragment>
   )
