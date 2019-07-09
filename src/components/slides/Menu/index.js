@@ -69,7 +69,17 @@ function Menu() {
       </section>
 
       <section className={`fullscreen_menu ${menu && 'opened'}`}>
-        <section className='exit' ><i onClick={toggleMenu} className="fas fa-times fa-2x"></i></section>
+        <section className='header'>
+          <section className='exit' ><i onClick={toggleMenu} className="fas fa-times fa-2x"></i></section>
+          <section className='header_menu'>
+            <section className='menu_nav'>
+              <section className='menu_nav_item'><p>Breakfast</p></section>
+              <section className='menu_nav_item'><p>Lunch</p></section>
+              <section className='menu_nav_item'><p>Dinner</p></section>
+              <section className='menu_nav_item'><p>Drinks</p></section>
+            </section>
+          </section>
+        </section>
 
         <section className='full_menu_items'>
 
