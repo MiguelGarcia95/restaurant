@@ -64,7 +64,7 @@ function Menu() {
             </section>
 
           </section>
-          <section className='item_more' onClick={toggleMenu}>
+          <section className='item_more' onClick={() => toggleMenu()}>
             <p>Open Menu</p>
           </section>
         </section>
@@ -72,7 +72,7 @@ function Menu() {
 
       <section className={`fullscreen_menu ${menu && 'opened'}`}>
         <section className='header'>
-          <section className='exit' ><i onClick={toggleMenu} className="fas fa-times fa-2x"></i></section>
+          <section className='exit' ><i onClick={() => toggleMenu()} className="fas fa-times fa-2x"></i></section>
           <section className='header_menu'>
             <section className='menu_nav'>
               <section className='menu_nav_item'><p>Breakfast</p></section>
@@ -83,13 +83,24 @@ function Menu() {
           </section>
         </section>
 
+        <section className={`fullscreen_item ${menuItem && 'opened'}`}>
+          <section className='fullscreen_item_container'>
+            <section className='exit' ><i onClick={() => toggleMenuItem()} className="fas fa-times fa-2x"></i></section>
+            <section className='fullscreen_item_image'>
+              {/* <img src='image.jpg' /> */}
+            </section>
+            <h1 className='item_title'>Straberry Vodka chocolate Cake</h1>
+            <p className='item_desc'>What the food is.</p>
+          </section>
+        </section>
+
         <section className='full_menu_items'>
 
           <section className='full_menu_item'>
             <section className='item_image'>
               <p className='item_price'>$9.99</p>
               <section className='item_open'>
-              <i className="fas fa-info-circle fa-lg" onClick={toggleMenuItem} ></i>
+              <i className="fas fa-info-circle fa-lg" onClick={() => toggleMenuItem()} ></i>
               </section>
             </section>
             <section className='item_description'>
@@ -264,17 +275,6 @@ function Menu() {
 
         </section>
 
-      </section>
-
-      <section className={`fullscreen_item ${menuItem && 'opened'}`}>
-        <section className='fullscreen_item_container'>
-          <section className='exit' ><i onClick={toggleMenuItem} className="fas fa-times fa-2x"></i></section>
-          <section className='fullscreen_item_image'>
-            {/* <img src='image.jpg' /> */}
-          </section>
-          <h1 className='item_title'>Straberry Vodka chocolate Cake</h1>
-          <p className='item_desc'>What the food is.</p>
-        </section>
       </section>
     </React.Fragment>
   )

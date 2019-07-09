@@ -219,13 +219,14 @@
 .fullscreen_menu .fullscreen_item {
   overflow: hidden;
   width: 100vw;
-  height: 0;
+  height: 0px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: steelblue;
   position: absolute;
   z-index: 999;
   top: 0;
+  left: 0;
 }
 
 .fullscreen_menu .fullscreen_item.opened {
