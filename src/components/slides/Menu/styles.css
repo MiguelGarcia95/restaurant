@@ -139,7 +139,7 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: rebeccapurple;
-  position: fixed;
+  position: absolute;
   z-index: 99;
   overflow-y: scroll;
 }
@@ -147,6 +147,10 @@
 .fullscreen_menu.opened {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.fullscreen_menu.item_opened {
+  overflow-y: hidden;
 }
 
 .fullscreen_menu .header {
@@ -222,7 +226,7 @@
   height: 0px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: steelblue;
+  background-color: #f0f0f0;
   position: absolute;
   z-index: 999;
   top: 0;
@@ -231,6 +235,16 @@
 
 .fullscreen_menu .fullscreen_item.opened {
   height: 100vh;
+}
+
+.fullscreen_menu .fullscreen_item .fullscreen_item_container {
+  width: 800px;
+  margin: auto;
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px;
 }
 
 .fullscreen_menu .full_menu_items {

@@ -134,11 +134,14 @@ $fullHeight: 100vh;
   transform: scale(0);
   transition: 0.5s;
   background-color: rebeccapurple;
-  position: fixed;
+  position: absolute;
   z-index: 99;
   overflow-y: scroll;
   &.opened {
     transform: scale(1);
+  }
+  &.item_opened {
+    overflow-y: hidden;
   }
 
   .header {
@@ -199,7 +202,7 @@ $fullHeight: 100vh;
     width: 100vw;
     height: 0px;
     transition: 0.5s;
-    background-color: steelblue;
+    background-color: rgb(240, 240, 240);
     position: absolute;
     z-index: 999;
     top: 0;
@@ -209,6 +212,11 @@ $fullHeight: 100vh;
     }
 
     .fullscreen_item_container {
+      width: 800px;
+      margin: auto;
+      box-shadow: inset 0px 0px 10px $lightBgColor;
+      box-sizing: border-box;
+      padding: 20px;
       .fullscreen_item_image {
 
       }
