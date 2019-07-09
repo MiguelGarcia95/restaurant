@@ -12,7 +12,6 @@ class App extends React.Component {
     currentSlide: 'welcome',
     increment: 0.5,
     firstLoad: true,
-    menu: false,
     tl: new window.TimelineMax()
   }
 
@@ -70,8 +69,6 @@ class App extends React.Component {
     }
   }
  
-  toggleMenu = () => this.setState({menu: !this.state.menu});
-
   setCurrentSlide = slide => {
     if (this.state.currentSlide !== slide) {
       this.setState({currentSlide: slide})
@@ -79,7 +76,7 @@ class App extends React.Component {
   }
 
   render() {
-    const {currentSlide, menu} = this.state;
+    const {currentSlide} = this.state;
     
     return (
       <div className="app">
@@ -87,7 +84,7 @@ class App extends React.Component {
         <Navbar setCurrentSlide={this.setCurrentSlide} currentSlide={currentSlide} />
 
         <Welcome setCurrentSlide={this.setCurrentSlide} />
-        <Menu menu={menu} toggleMenu={this.toggleMenu} />
+        <Menu />
         <Contact />
       </div>
     );
