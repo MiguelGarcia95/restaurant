@@ -140,10 +140,10 @@
   transition: 0.5s;
   background-color: rebeccapurple;
   position: fixed;
+  z-index: 99;
 }
 
 .fullscreen_menu.opened {
-  z-index: 99;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -151,10 +151,13 @@
 .fullscreen_menu .exit {
   width: 50px;
   height: 50px;
-  background-color: red;
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 .fullscreen_menu .exit i {
-  margin: auto;
+  margin-top: 9px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=styles.css.map */

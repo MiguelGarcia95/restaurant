@@ -4,7 +4,7 @@ import './styles.css';
 function Menu() {
   const [menu, setMenu] = useState(false);
   const toggleMenu = () => setMenu(!menu);
-  
+
   return (
     <React.Fragment>
       <section className='page_section menu'>
@@ -69,7 +69,7 @@ function Menu() {
       </section>
 
       <section className={`fullscreen_menu ${menu && 'opened'}`}>
-        <section className='exit' ><i onClick={toggleMenu} className="fas fa-times"></i></section>
+        <section className='exit' ><i onClick={toggleMenu} className="fas fa-times fa-2x"></i></section>
       </section>
     </React.Fragment>
   )
