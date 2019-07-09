@@ -1,0 +1,72 @@
+.welcome .content_side {
+  position: absolute;
+  height: 100vh;
+  background-color: #f0f0f0;
+  width: 60%;
+  padding-left: 80px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  left: 0;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  top: -100vh;
+}
+
+.welcome .content_side .content-button {
+  width: 210px;
+  height: 70px;
+  position: absolute;
+  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  bottom: 100px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.welcome .content_side .content-button p {
+  line-height: 70px;
+  margin: 0;
+  color: #232323;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5), 1px 1px 5px white, -1px -1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px white;
+}
+
+.welcome .content_side h1 {
+  text-shadow: 1px 1px 1px white, 1px 1px 5px rgba(0, 0, 0, 0.5), -1px -1px 5px white, -1px -1px 5px rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  color: #232323;
+  margin: 0;
+  text-transform: uppercase;
+  margin-top: 100px;
+}
+
+.welcome .content_side h1:first-of-type {
+  font-size: 3em;
+  margin-left: 100px;
+}
+
+.welcome .content_side h1:last-of-type {
+  font-size: 5em;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.welcome .image_side {
+  position: absolute;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background: url("/img/background.jpg");
+  width: 40%;
+  right: 0;
+  z-index: 1;
+  bottom: -100vh;
+}
+/*# sourceMappingURL=styles.css.map */
