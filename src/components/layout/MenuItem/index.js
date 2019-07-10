@@ -1,7 +1,7 @@
-import React, {useState } from 'react';
+import React from 'react';
 import './styles.css';
 
-function MenuItem(item, toggleMenuItem, setMenuItem) {
+function MenuItem({item, toggleMenuItem, setMenuItem}) {
   const displayItem = () => {
     toggleMenuItem();
     // setMenuItem(item.name);

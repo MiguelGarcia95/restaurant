@@ -6,8 +6,12 @@ function Menu() {
   const [menu, setMenu] = useState(false);
   const [menuItem, setToggleMenuItem] = useState(false);
   const [currentMenuItem, setCurrentMenuItem] = useState(null);
+  const [menuCategory, setMenuCategory] = useState('breakfast');
   const toggleMenu = () => setMenu(!menu);
   const toggleMenuItem = () => setToggleMenuItem(!menuItem);
+  const setCategory = (category) => setMenuCategory(category);
+  const setMenuItem = (item) => setCurrentMenuItem(item);
+
   const displayMenuItems = () => {
     return [1,2,3,4,5].map(item => <MenuItem key={item} toggleMenuItem={toggleMenuItem} setMenuItem={toggleMenuItem} /> )
   }
@@ -62,10 +66,10 @@ function Menu() {
           <section className='exit' ><i onClick={() => toggleMenu()} className="fas fa-times fa-2x"></i></section>
           <section className='header_menu'>
             <section className='menu_nav'>
-              <section className='menu_nav_item'><p>Breakfast</p></section>
-              <section className='menu_nav_item'><p>Lunch</p></section>
-              <section className='menu_nav_item'><p>Dinner</p></section>
-              <section className='menu_nav_item'><p>Drinks</p></section>
+              <section className='menu_nav_item' onClick={() => setCategory('breakfast')}><p>Breakfast</p></section>
+              <section className='menu_nav_item' onClick={() => setCategory('lunch')}><p>Lunch</p></section>
+              <section className='menu_nav_item' onClick={() => setCategory('dinner')}><p>Dinner</p></section>
+              <section className='menu_nav_item' onClick={() => setCategory('drinks')}><p>Drinks</p></section>
             </section>
           </section>
         </section>
