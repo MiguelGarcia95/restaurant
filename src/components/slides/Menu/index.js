@@ -21,7 +21,7 @@ function Menu() {
 
   const displayMenuItems = () => {
     const filteredItems = filterItems(menuCategory);
-    return filteredItems.map(item => <MenuItem key={item.id} item={item} toggleMenuItem={toggleMenuItem} setMenuItem={toggleMenuItem} /> );
+    return filteredItems.map(item => <MenuItem key={item.id} item={item} toggleMenuItem={toggleMenuItem} setMenuItem={setMenuItem} /> );
   }
 
   const displayHomeMenu = () => {
@@ -92,13 +92,15 @@ function Menu() {
 
         <section className={`fullscreen_item ${menuItem && 'opened'}`}>
           <section className='exit' ><i onClick={() => toggleMenuItem()} className="fas fa-times fa-2x"></i></section>
-          <section className='fullscreen_item_container'>
-            <section className='fullscreen_item_image'>
-              <img src='img/background.jpg' alt='menu item' />
+          {currentMenuItem && (
+            <section className='fullscreen_item_container'>
+              <section className='fullscreen_item_image'>
+                <img src={currentMenuItem.image} alt='menu item' />
+              </section>
+              <h1 className='item_title'>{currentMenuItem.name}</h1>
+              <p className='item_desc'>{currentMenuItem.description}</p>
             </section>
-            <h1 className='item_title'>Straberry Vodka chocolate Cake</h1>
-            <p className='item_desc'>What the food is.</p>
-          </section>
+          )}
         </section>
 
         <section className='full_menu_items'>
