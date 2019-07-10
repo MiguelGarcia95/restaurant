@@ -7,8 +7,6 @@ function MenuItem({item, toggleMenuItem, setMenuItem}) {
     setMenuItem(item);
   }
 
-  // if (!item) return '';
-
   return (
     <section className='full_menu_item'>
       <section className='item_image'>
@@ -21,7 +19,6 @@ function MenuItem({item, toggleMenuItem, setMenuItem}) {
       <section className='item_description'>
         <h2 className='item_title'>{item.name}</h2>
       </section>
-
     </section>
   )
 }

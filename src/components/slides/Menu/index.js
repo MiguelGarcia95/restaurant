@@ -23,6 +23,22 @@ function Menu() {
     const filteredItems = filterItems(menuCategory);
     return filteredItems.map(item => <MenuItem key={item.id} item={item} toggleMenuItem={toggleMenuItem} setMenuItem={toggleMenuItem} /> );
   }
+
+  const displayHomeMenu = () => {
+    const filterdItems = items.slice(0, 3);
+    return filterdItems.map(item => (
+      <section className='menu_item' key={item.id} >
+        <section className='item_image'>
+          <img src={item.image} alt='menu item' />
+          <p className='item_price'>${item.price}</p>
+        </section>
+        <section className='item_description'>
+          <h2 className='item_title'>{item.name}</h2>
+        </section>
+      </section>
+    ));
+  }
+
   return (
     <React.Fragment>
       <section className='page_section menu'>
@@ -33,35 +49,7 @@ function Menu() {
             <p>Whether you're in for breakfast, a business lunch or a family dinner, we promise you'll find something to love.</p>
           </section>
           <section className='menu_items'>
-
-            <section className='menu_item'>
-              <section className='item_image'>
-                <img src='img/background.jpg' alt='menu item' />
-                <p className='item_price'>$9.99</p>
-              </section>
-              <section className='item_description'>
-                <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-              </section>
-            </section>
-            <section className='menu_item'>
-              <section className='item_image'>
-                <img src='img/background.jpg' alt='menu item' />
-                <p className='item_price'>$9.99</p>
-              </section>
-              <section className='item_description'>
-                <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-              </section>
-            </section>
-            <section className='menu_item'>
-              <section className='item_image'>
-                <img src='img/background.jpg' alt='menu item' />
-                <p className='item_price'>$9.99</p>
-              </section>
-              <section className='item_description'>
-                <h2 className='item_title'>Straberry Vodka chocolate Cake</h2>
-              </section>
-            </section>
-
+            {displayHomeMenu()}
           </section>
           <section className='item_more' onClick={() => toggleMenu()}>
             <p>Open Menu</p>

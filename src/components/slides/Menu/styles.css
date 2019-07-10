@@ -45,14 +45,12 @@
   float: left;
   margin: 0px 1.6%;
   height: 180px;
-  background-color: red;
   margin-top: 30px;
 }
 
 .menu .menu_side .menu_items .menu_item .item_image {
   width: 100%;
   height: 130px;
-  background-color: green;
   position: relative;
 }
 
@@ -64,7 +62,6 @@
 }
 
 .menu .menu_side .menu_items .menu_item .item_image .item_price {
-  background-color: red;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -162,7 +159,7 @@
 
 .fullscreen_menu .header {
   width: 100%;
-  height: 50px;
+  height: 70px;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -197,7 +194,7 @@
 }
 
 .fullscreen_menu .header .header_menu .menu_nav {
-  height: 50px;
+  height: 70px;
   margin: auto;
   width: 600px;
 }
@@ -205,8 +202,8 @@
 .fullscreen_menu .header .header_menu .menu_nav .menu_nav_item {
   float: left;
   width: 150px;
-  height: 50px;
-  line-height: 50px;
+  height: 70px;
+  line-height: 70px;
   text-align: center;
   cursor: pointer;
 }
@@ -216,8 +213,8 @@
 }
 
 .fullscreen_menu .header .header_menu .menu_nav .menu_nav_item:hover, .fullscreen_menu .header .header_menu .menu_nav .menu_nav_item.active {
-  -webkit-box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
   font-weight: 600;
 }
 
@@ -305,7 +302,7 @@
           box-sizing: border-box;
   width: 100%;
   padding: 0 50px;
-  margin-top: 50px;
+  margin-top: 100px;
   position: absolute;
   top: 0;
   z-index: 2;
