@@ -30,4 +30,58 @@
   font-size: 1.1em;
   text-shadow: 1px 1px 5px white, 1px 1px 5px black;
 }
+
+@media (max-width: 800px) {
+  .navbar {
+    height: 50px;
+    width: 100vw;
+    text-align: center;
+  }
+  .navbar .direction {
+    float: right;
+  }
+  .navbar span {
+    width: 150px;
+    float: left;
+  }
+  .navbar span p {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    padding: 15px 0;
+    line-height: 20px;
+  }
+  .navbar span.active p {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    height: 50px;
+    width: 100vw;
+    text-align: center;
+  }
+  .navbar .direction {
+    float: right;
+  }
+  .navbar span {
+    width: 150px;
+    float: left;
+  }
+  .navbar span p {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+    padding: 15px 0;
+    line-height: 20px;
+  }
+  .navbar span.active p {
+    font-size: 1.1em;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

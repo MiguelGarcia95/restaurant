@@ -87,14 +87,61 @@ $fullHeight: 100vh;
 @media (max-width: 1100px) {
   .welcome {
     .content_side {
+      h1 {margin-top: 80px;}
+      h1:first-of-type {
+        font-size: 2.5em;
+        margin-left: 80px;
+      }
+      h1:last-of-type {font-size: 4.3em;}
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .welcome {
+    .content_side {
+      .content-button {
+        bottom: 50px;
+        height: 50px;
+        p {line-height: 50px;}
+      }
+  
+      h1 {margin-top: 50px;}
+      h1:first-of-type {
+        font-size: 2em;
+        margin-left: 50px;
+      }
+      h1:last-of-type {font-size: 3.5em;}
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .welcome {
+    .content_side {
+      box-sizing: border-box;
+      padding-top: 50px !important;
+      padding-left: 0px;
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .welcome {
+    .content_side {
+      box-sizing: border-box;
+      padding-top: 50px !important;
       // width: 60%;
-      // padding-left: 80px;
+      padding-left: 00px;
   
       .content-button {
+        // bottom: 50px;
         // width: 210px;
-        // height: 70px;
+        // height: 50px;
         p {
-          // line-height: 70px;
+          // line-height: 50px;
           // font-size: 1em;
           // font-weight: 600;
         }
@@ -102,14 +149,14 @@ $fullHeight: 100vh;
   
       h1 {
         // font-weight: 600;
-        // margin-top: 100px;
+        // margin-top: 50px;
       }
       h1:first-of-type {
-        // font-size: 3em;
-        // margin-left: 100px;
+        // font-size: 2em;
+        // margin-left: 50px;
       }
       h1:last-of-type {
-        // font-size: 5em;
+        // font-size: 3.5em;
       }
     }
     
