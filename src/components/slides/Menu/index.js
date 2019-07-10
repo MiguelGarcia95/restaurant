@@ -1,8 +1,13 @@
 import React, {useState } from 'react';
 import MenuItem from '../../layout/MenuItem';
+import items from '../../../utils/items';
 import './styles.css';
 
 const isCategoryActive = (category, currentCategory) => category === currentCategory ? true : false; 
+
+const filterItems = category => {
+  return items.filter(item => item.category === category);
+}
 
 function Menu() {
   const [menu, setMenu] = useState(false);
@@ -15,7 +20,8 @@ function Menu() {
   const setMenuItem = item => setCurrentMenuItem(item);
 
   const displayMenuItems = () => {
-    return [1,2,3,4,5].map(item => <MenuItem key={item} toggleMenuItem={toggleMenuItem} setMenuItem={toggleMenuItem} /> )
+    const filteredItems = filterItems(menuCategory);
+    return filteredItems.map(item => <MenuItem key={item.id} item={item} toggleMenuItem={toggleMenuItem} setMenuItem={toggleMenuItem} /> );
   }
   return (
     <React.Fragment>
