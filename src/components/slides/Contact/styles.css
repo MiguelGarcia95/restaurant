@@ -1,5 +1,22 @@
 .contact {
   background-color: #f0f0f0 !important;
+  text-align: center;
+}
+
+.contact .status {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #232323;
+}
+
+.contact .status p {
+  margin: 0;
+  line-break: 40px;
+  height: 40px;
+  font-size: 1.5em;
 }
 
 .contact .contact_form {

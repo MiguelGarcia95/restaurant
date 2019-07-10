@@ -34,9 +34,9 @@ function Contact() {
 
   return (
     <section className='page_section contact'>
+      {status && <section className='status'><p>{status}</p></section>}
       <section className='contact_form'>
         <h1>Contact Us</h1>
-        {status && <h2>{status}</h2>}
         <section className='form'>
           <section className='inputs'>
             <input type='text' placeholder='Name' name='name' autoComplete='off' onChange={e => setNameValue(e.target.value)} required />

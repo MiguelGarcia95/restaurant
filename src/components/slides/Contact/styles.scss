@@ -5,6 +5,20 @@ $fullHeight: 100vh;
 
 .contact {
   background-color: rgb(240, 240, 240) !important;
+  text-align: center;
+  .status {
+    position: absolute;
+    top: 25px;
+    left: 0; right: 0;
+    margin: auto;
+    color: #232323;
+    p {
+      margin: 0;
+      line-break: 40px;
+      height: 40px;
+      font-size: 1.5em;
+    }
+  }
   .contact_form {
     width: 800px; 
     height: 400px;
