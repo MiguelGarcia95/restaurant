@@ -1,9 +1,9 @@
 import React, {useState } from 'react';
 import MenuItem from '../../layout/MenuItem';
+import MenuHomeItem from '../../layout/MenuHomeItem';
+import MenuNavbar from '../../layout/MenuNavbar';
 import items from '../../../utils/items';
 import './styles.css';
-
-const isCategoryActive = (category, currentCategory) => category === currentCategory ? true : false; 
 
 const filterItems = category => {
   return items.filter(item => item.category === category);
@@ -26,17 +26,7 @@ function Menu() {
 
   const displayHomeMenu = () => {
     const filterdItems = items.slice(0, 3);
-    return filterdItems.map(item => (
-      <section className='menu_item' key={item.id} >
-        <section className='item_image'>
-          <img src={item.image} alt='menu item' />
-          <p className='item_price'>${item.price}</p>
-        </section>
-        <section className='item_description'>
-          <h2 className='item_title'>{item.name}</h2>
-        </section>
-      </section>
-    ));
+    return filterdItems.map(item => <MenuHomeItem key={item.id} item={item} />);
   }
 
   return (
@@ -48,9 +38,7 @@ function Menu() {
             <h1>Our Menu</h1>
             <p>Whether you're in for breakfast, a business lunch or a family dinner, we promise you'll find something to love.</p>
           </section>
-          <section className='menu_items'>
-            {displayHomeMenu()}
-          </section>
+          <section className='menu_items'>{displayHomeMenu()}</section>
           <section className='item_more' onClick={() => toggleMenu()}>
             <p>Open Menu</p>
           </section>
@@ -61,32 +49,7 @@ function Menu() {
         <section className='header'>
           <section className='exit' ><i onClick={() => toggleMenu()} className="fas fa-times fa-2x"></i></section>
           <section className='header_menu'>
-            <section className='menu_nav'>
-              <section
-                className={`menu_nav_item ${isCategoryActive('breakfast', menuCategory) ? 'active' : ''}`} 
-                onClick={() => setCategory('breakfast')}
-              >
-                <p>Breakfast</p>
-              </section>
-              <section 
-                className={`menu_nav_item ${isCategoryActive('lunch', menuCategory) ? 'active' : ''}`} 
-                onClick={() => setCategory('lunch')}
-              >
-                <p>Lunch</p>
-              </section>
-              <section 
-                className={`menu_nav_item ${isCategoryActive('dinner', menuCategory) ? 'active' : ''}`} 
-                onClick={() => setCategory('dinner')}
-              >
-                <p>Dinner</p>
-              </section>
-              <section 
-                className={`menu_nav_item ${isCategoryActive('drinks', menuCategory) ? 'active' : ''}`} 
-                onClick={() => setCategory('drinks')}
-              >
-                <p>Drinks</p>
-              </section>
-            </section>
+            <MenuNavbar menuCategory={menuCategory} setCategory={setCategory} />          
           </section>
         </section>
 

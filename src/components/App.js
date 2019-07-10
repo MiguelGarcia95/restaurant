@@ -10,7 +10,7 @@ class App extends React.Component {
   state = {
     loading: true,
     currentSlide: 'welcome',
-    increment: 0.5,
+    increment: 0.25,
     firstLoad: true,
     tl: new window.TimelineMax()
   }
