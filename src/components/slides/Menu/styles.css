@@ -77,17 +77,6 @@
   overflow: hidden;
 }
 
-.menu .menu_image_side .cube {
-  width: 50%;
-  height: 200px;
-  float: left;
-  background-color: rgba(187, 187, 187, 0.5);
-}
-
-.menu .menu_image_side .cube.shaded {
-  background-color: rgba(26, 26, 26, 0.5);
-}
-
 .fullscreen_menu {
   overflow: hidden;
   width: 100vw;
