@@ -62,4 +62,11 @@
   white-space: nowrap;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 1200px) {
+  .full_menu_item {
+    width: 30%;
+    margin: 20px 1.6%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
