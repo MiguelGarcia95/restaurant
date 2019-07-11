@@ -51,6 +51,7 @@
     -webkit-transform: rotate(0);
             transform: rotate(0);
     padding: 15px 0;
+    margin-left: 0px;
     line-height: 20px;
   }
   .navbar span.active p {
@@ -58,30 +59,27 @@
   }
 }
 
-@media (max-width: 800px) {
-  .navbar {
-    height: 50px;
-    width: 100vw;
-    text-align: center;
-  }
-  .navbar .direction {
-    float: right;
-  }
+@media (max-width: 550px) {
   .navbar span {
-    width: 150px;
-    float: left;
+    width: 100px;
   }
   .navbar span p {
-    -webkit-writing-mode: horizontal-tb;
-        -ms-writing-mode: lr-tb;
-            writing-mode: horizontal-tb;
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-    padding: 15px 0;
-    line-height: 20px;
+    font-size: 0.9em;
   }
   .navbar span.active p {
-    font-size: 1.1em;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar span {
+    width: 80px;
+  }
+  .navbar span p {
+    font-size: 0.8em;
+  }
+  .navbar span.active p {
+    font-size: 0.8em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
