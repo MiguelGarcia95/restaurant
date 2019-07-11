@@ -119,6 +119,7 @@ $fullHeight: 100vh;
 
 @media (max-width: 800px) {
   .welcome {
+    padding-left: 0px !important;
     .content_side {
       box-sizing: border-box;
       padding-top: 50px !important;

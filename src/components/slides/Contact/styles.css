@@ -133,39 +133,66 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .contact .status p {
-    line-break: 30px;
-    height: 30px;
-    font-size: 1.2em;
+@media (max-width: 800px) {
+  .contact {
+    padding-left: 0px !important;
+    padding-top: 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .contact .status {
+    top: 55px;
   }
   .contact .contact_form {
-    width: 600px;
-    height: 300px;
-    padding: 15px;
+    width: 100%;
+    top: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact .contact_form {
+    padding: 0px 15px;
+    top: unset;
+    bottom: 0px;
   }
   .contact .contact_form h1 {
-    line-height: 40px;
-    font-size: 1.5em;
-    height: 40px;
+    line-height: 30px;
+    height: 30px;
+    margin-top: 8px;
   }
   .contact .contact_form .form {
-    height: 230px;
+    height: auto;
   }
   .contact .contact_form .form input, .contact .contact_form .form textarea {
-    margin: 15px 0;
+    margin: 10px 0;
+  }
+  .contact .contact_form .form .inputs {
+    width: 100%;
+    height: 100px;
   }
   .contact .contact_form .form .inputs input {
-    height: 40px;
+    width: 45%;
+    height: 30px;
+  }
+  .contact .contact_form .form .inputs input:nth-of-type(1) {
+    margin-right: 5%;
+  }
+  .contact .contact_form .form .inputs input:nth-of-type(2) {
+    margin-left: 5%;
+  }
+  .contact .contact_form .form .inputs input:nth-of-type(3) {
+    width: 100%;
+    float: left;
   }
   .contact .contact_form .form textarea {
-    height: 110px;
-    padding: 15px;
+    width: 100%;
+    height: 90px;
   }
   .contact .contact_form .form .form_button {
-    margin: 15px 0;
-    line-height: 40px;
-    height: 40px;
+    margin: 0;
+    line-height: 30px;
+    height: 30px;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=styles.css.map */

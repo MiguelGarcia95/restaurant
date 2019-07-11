@@ -104,6 +104,9 @@
 }
 
 @media (max-width: 800px) {
+  .welcome {
+    padding-left: 0px !important;
+  }
   .welcome .content_side {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
