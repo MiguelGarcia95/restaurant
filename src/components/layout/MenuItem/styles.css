@@ -68,4 +68,11 @@
     margin: 20px 1.6%;
   }
 }
+
+@media (max-width: 650px) {
+  .full_menu_item {
+    width: 45%;
+    margin: 20px 2.5%;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

@@ -111,6 +111,9 @@ $fullHeight: 100vh;
   }
   &.item_opened {
     overflow-y: hidden;
+    .header {
+      height: 0;
+    }
   }
 
   .header {
@@ -120,7 +123,8 @@ $fullHeight: 100vh;
     top: 0;
     background-color: rgb(240, 240, 240);
     z-index: 3;
-
+    overflow: hidden;
+    transition: height 0.5s;
     .header_menu {
       position: absolute;
       width: 100%;
@@ -138,7 +142,7 @@ $fullHeight: 100vh;
     height: 0px;
     transition: 0.5s;
     background-color: rgb(240, 240, 240);
-    position: absolute;
+    position: sticky;
     z-index: 999;
     top: 0;
     left: 0;
@@ -307,90 +311,6 @@ $fullHeight: 100vh;
         height: 100%;
         .fullscreen_item_image {margin-top: 50px;}
       }
-    }
-  }
-}
-
-
-@media (max-width: 650px) {
-  .menu {
-    .menu_side {
-      padding-left: 25%;
-      // padding-top: 50px;
-      .menu_header {
-        // width: 100%;
-        // padding: 0 50px;
-        h1 {
-          // line-height: 50px;
-          // font-size: 1.2em;
-          // height: 50px;
-        }
-        // p {font-size: 0.9em;}
-      }
-      .menu_items {
-        padding: 0 25px;
-        // height: 200px;
-      }
-      .item_more {
-        // width: 120px;
-        // height: 40px;
-        // position: absolute;
-        // bottom: 0;
-        // left: 30%;
-        // right: 0;
-        
-        p {
-          // width: 120px;
-          // height: 40px;
-          // line-height: 40px;
-          // font-size: 0.9em;
-        }
-      }
-    }
-    .menu_image_side {
-      width: 25%; 
-      // padding-left: 0px;
-      // left: -100vw;
-      // background-position: center;
-    }
-  }
-  
-  .fullscreen_menu {
-    .header {
-      // width: 100%;
-      height: 50px;
-    }
-  
-    .fullscreen_item {
-  
-      .fullscreen_item_container {
-        width: 600px;
-        width: 100%;
-        height: 100%;
-        // height: 300px;
-        // padding: 25px;
-        .fullscreen_item_image {
-          // width: 80%;
-          // height: 150px;
-          margin-top: 50px;
-        }
-        .item_title {
-          // font-size: 1.1em;
-          // line-height: 40px;
-          // margin: 0 auto;
-        }
-        .item_desc {
-          // font-size: 0.9em;
-          // width: 80%;
-          // margin: 5px auto;
-        }
-      }
-    }
-  
-    .full_menu_items {
-      // width: 100%;
-      // padding: 0 50px;
-      // margin-top: 100px;
     }
   }
 }
