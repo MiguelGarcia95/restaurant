@@ -76,7 +76,7 @@ $fullHeight: 100vh;
   .image_side {
     @include welcomeSide;
     @include backgroundImage;
-    background: url('/img/background.jpg');
+    background: url('/restaurant/img/background.jpg');
     width: 40%; 
     right: 0;
     z-index: 1;
