@@ -1,6 +1,7 @@
 {
   "name": "restaurant",
   "version": "0.1.0",
+  "home": "miguelgarcia95.github.io/restaurant",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
