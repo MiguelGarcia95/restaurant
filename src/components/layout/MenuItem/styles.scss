@@ -39,7 +39,6 @@ $lightBgColor: rgba(0,0,0,0.5);
   .item_description {
     height: 50px;
     text-align: center;
-    background-color: red;
     background-color: rgb(240, 240, 240);
     .item_title {
       height: 50px;
@@ -61,7 +60,7 @@ $lightBgColor: rgba(0,0,0,0.5);
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .full_menu_item {
     // width: 30%; 
     // margin: 20px 1.6%;

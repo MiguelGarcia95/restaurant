@@ -33,4 +33,22 @@
   overflow: hidden;
   white-space: nowrap;
 }
+
+@media (max-width: 900px) {
+  .menu_item .item_description .item_title {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 750px) {
+  .menu_item {
+    height: 150px;
+  }
+  .menu_item .item_image {
+    height: 100px;
+  }
+  .menu_item .item_description .item_title {
+    font-size: 0.8em;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

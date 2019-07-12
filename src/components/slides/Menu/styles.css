@@ -232,4 +232,112 @@
     font-size: 0.9em;
   }
 }
+
+@media (max-width: 900px) {
+  .menu .menu_side .menu_header h1 {
+    font-size: 1.5em;
+  }
+  .menu .menu_side .menu_header p {
+    font-size: 1em;
+  }
+  .menu .menu_side .menu_items {
+    height: 230px;
+  }
+  .menu .menu_side .item_more {
+    width: 120px;
+    height: 40px;
+  }
+  .menu .menu_side .item_more p {
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 0.9em;
+  }
+  .fullscreen_menu .fullscreen_item .fullscreen_item_container {
+    width: 600px;
+    height: 300px;
+  }
+  .fullscreen_menu .fullscreen_item .fullscreen_item_container .fullscreen_item_image {
+    height: 150px;
+  }
+}
+
+@media (max-width: 800px) {
+  .menu .menu_side {
+    padding-left: 30%;
+    padding-top: 50px;
+  }
+  .menu .menu_side .menu_header p {
+    font-size: 0.9em;
+  }
+  .menu .menu_side .item_more {
+    bottom: 0;
+  }
+  .menu .menu_image_side {
+    width: 30%;
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  .menu .menu_side .menu_header h1 {
+    line-height: 50px;
+    font-size: 1.2em;
+    height: 50px;
+  }
+  .menu .menu_side .menu_items {
+    height: 200px;
+  }
+  .menu .menu_side .item_more {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    right: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .menu .menu_side {
+    padding-left: 25%;
+  }
+  .menu .menu_side .menu_items {
+    padding: 0 25px;
+  }
+  .menu .menu_image_side {
+    width: 25%;
+  }
+  .fullscreen_menu .header {
+    height: 50px;
+  }
+  .fullscreen_menu .fullscreen_item .fullscreen_item_container {
+    width: 100%;
+    height: 100%;
+  }
+  .fullscreen_menu .fullscreen_item .fullscreen_item_container .fullscreen_item_image {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  .menu .menu_side {
+    padding-left: 25%;
+  }
+  .menu .menu_side .menu_items {
+    padding: 0 25px;
+  }
+  .menu .menu_image_side {
+    width: 25%;
+  }
+  .fullscreen_menu .header {
+    height: 50px;
+  }
+  .fullscreen_menu .fullscreen_item .fullscreen_item_container {
+    width: 600px;
+    width: 100%;
+    height: 100%;
+  }
+  .fullscreen_menu .fullscreen_item .fullscreen_item_container .fullscreen_item_image {
+    margin-top: 50px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

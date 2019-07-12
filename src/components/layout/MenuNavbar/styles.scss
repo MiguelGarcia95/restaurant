@@ -1,4 +1,4 @@
-$lightBgColor: rgba(0,0,0,0.5);
+$lightBgColor: rgba(0,0,0,0.1);
 
 .menu_nav {
   height: 70px;
@@ -13,8 +13,35 @@ $lightBgColor: rgba(0,0,0,0.5);
     cursor: pointer;
     p {margin: 0;}
     &:hover, &.active {
-      box-shadow: inset 0px 0px 2px $lightBgColor;
+      border-bottom: 2px solid $lightBgColor;
       font-weight: 600;
+      box-sizing: border-box;
+      text-shadow: 1px 1px 1px $lightBgColor,
+                  1px 1px 1px  white,
+                 -1px -1px 15px $lightBgColor,
+                 -1px -1px 5px white;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .menu_nav {
+    width: 400px; 
+    .menu_nav_item {
+      width: 100px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .menu_nav {
+    // height: 70px;
+    width: 280px; 
+    .menu_nav_item {
+      width: 70px;
+      height: 50px;
+      line-height: 50px;
+      p {font-size: 0.8em;}
     }
   }
 }

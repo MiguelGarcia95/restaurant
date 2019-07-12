@@ -18,8 +18,33 @@
 }
 
 .menu_nav .menu_nav_item:hover, .menu_nav .menu_nav_item.active {
-  -webkit-box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
-          box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   font-weight: 600;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1), 1px 1px 1px white, -1px -1px 15px rgba(0, 0, 0, 0.1), -1px -1px 5px white;
+}
+
+@media (max-width: 900px) {
+  .menu_nav {
+    width: 400px;
+  }
+  .menu_nav .menu_nav_item {
+    width: 100px;
+  }
+}
+
+@media (max-width: 650px) {
+  .menu_nav {
+    width: 280px;
+  }
+  .menu_nav .menu_nav_item {
+    width: 70px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .menu_nav .menu_nav_item p {
+    font-size: 0.8em;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
